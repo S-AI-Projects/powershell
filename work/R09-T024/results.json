@@ -1,0 +1,16 @@
+{
+  "tools": {
+    "powershell": "PowerShell 7.7.0",
+    "pester": "6.2.0",
+    "python": "3.14.7"
+  },
+  "learner_stub_unsolved": true,
+  "refactored_reference": {
+    "returncode": 0,
+    "counts": {
+      "total": 24,
+      "failed": 0,
+      "passed": 24
+    }
+  }
+}
