@@ -1,0 +1,25 @@
+{
+  "tools": {
+    "powershell": "PowerShell 7.7.0",
+    "pester": "6.2.0",
+    "python": "3.14.7"
+  },
+  "learner_stub_unsolved": true,
+  "unmodified_reference": {
+    "returncode": 0,
+    "counts": {
+      "total": 17,
+      "failed": 0,
+      "passed": 17
+    }
+  },
+  "mutant_run": {
+    "returncode": 1,
+    "counts": {
+      "total": 17,
+      "failed": 1,
+      "passed": 16
+    },
+    "rejected_as_expected": true
+  }
+}
