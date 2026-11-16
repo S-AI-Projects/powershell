@@ -98,15 +98,24 @@ Class WordSearch {
         return $present.Count -eq $word.Length
     }
 
-    [PSObject] hidden TestMatching($start, $end, $lenght) {
+    [PSObject] hidden TestMatching($start, $end, $length) {
         <#
         .DESCRIPTION
-        A helper function to check if a possible start and end match a potential word, and which direction it is matching to.
+        Helper function to check if a start-end coordinate pair matches a straight-line word segment.
+        Exercise-specific invariant: For a word of length N (with span length = N - 1), the absolute
+        coordinate offset must equal $length in one of four valid orientations:
+        - Horizontal: same row ($start[0] == $end[0]) and column offset equals $length.
+        - Vertical: same column ($start[1] == $end[1]) and row offset equals $length.
+        - Dexter diagonal: row delta equals column delta ($start[0] - $end[0] == $start[1] - $end[1]).
+        - Sinister diagonal: row + col sum is preserved ($start[0] + $start[1] == $end[0] + $end[1]).
         #>
-        $horizontalMatch = ($start[0] -eq $end[0]) -and ([Math]::Abs($start[1] - $end[1]) -eq $lenght)
-        $verticalMatch   = ($start[1] -eq $end[1]) -and ([Math]::Abs($start[0] - $end[0]) -eq $lenght)
-        $dexDiagMatch    = ($start[0] - $end[0] -eq $start[1] - $end[1]) -and ([Math]::Abs($start[0] - $end[0]) -eq $lenght)
-        $sinDiagMatch    = ($start[0] + $start[1] -eq $end[0] + $end[1]) -and ([Math]::Abs($start[0] - $end[0]) -eq $lenght)
+        $deltaRow = [Math]::Abs($start[0] - $end[0])
+        $deltaCol = [Math]::Abs($start[1] - $end[1])
+
+        $horizontalMatch = ($start[0] -eq $end[0]) -and ($deltaCol -eq $length)
+        $verticalMatch   = ($start[1] -eq $end[1]) -and ($deltaRow -eq $length)
+        $dexDiagMatch    = ($start[0] - $end[0] -eq $start[1] - $end[1]) -and ($deltaRow -eq $length)
+        $sinDiagMatch    = ($start[0] + $start[1] -eq $end[0] + $end[1]) -and ($deltaRow -eq $length)
 
         $match = switch ($true) {
             $horizontalMatch {@{IsMatch=$true ; Direction="horizontal"}}
