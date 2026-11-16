@@ -5,6 +5,17 @@ $OPERATORS = @{
     'divided' = '/'
 }
 
+<#
+.COMPLEXITY
+Time Complexity: O(L + T) where L is the character length of the question string and T is the count of parsed tokens.
+- Regex normalization and string splitting traverse the question in linear time O(L).
+- Token validation (ValidateStack) performs a single-pass membership check in O(T).
+- Evaluation (ProcessStack) accumulates results in left-to-right order in O(T) arithmetic steps without operator precedence.
+Space Complexity: O(T) auxiliary storage required for the token array.
+Invariants:
+- A syntactically valid question always produces an odd number of tokens: T = 2k + 1, where k is the number of binary operators.
+- Token sequence strictly alternates: [Operand, Operator, Operand, ..., Operand].
+#>
 Function Get-Answer() {
     <#
     .SYNOPSIS
