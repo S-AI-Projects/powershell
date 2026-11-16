@@ -1,0 +1,50 @@
+{
+  "tools": {
+    "powershell": "PowerShell 7.7.0",
+    "pester": "6.2.0",
+    "python": "3.14.7"
+  },
+  "learner_stub_unsolved": true,
+  "reference_run": {
+    "returncode": 0,
+    "counts": {
+      "total": 52,
+      "failed": 0,
+      "passed": 52
+    }
+  },
+  "decision_table": [
+    {
+      "Case": "on the hour",
+      "Hour": 9,
+      "Minute": 0,
+      "Expected": "09:00",
+      "Actual": "09:00",
+      "Passed": true
+    },
+    {
+      "Case": "past the hour",
+      "Hour": 10,
+      "Minute": 23,
+      "Expected": "10:23",
+      "Actual": "10:23",
+      "Passed": true
+    },
+    {
+      "Case": "hour rolls over",
+      "Hour": 25,
+      "Minute": 0,
+      "Expected": "01:00",
+      "Actual": "01:00",
+      "Passed": true
+    },
+    {
+      "Case": "negative offset",
+      "Hour": 0,
+      "Minute": -1,
+      "Expected": "23:59",
+      "Actual": "23:59",
+      "Passed": true
+    }
+  ]
+}
