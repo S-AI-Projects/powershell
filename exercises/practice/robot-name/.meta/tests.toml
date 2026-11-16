@@ -1,0 +1,21 @@
+# Canonical test case configuration for robot-name
+#
+# Note: Upstream exercism/problem-specifications does not define a canonical-data.json
+# for robot-name because random generation and collision resistance require
+# stateful track-specific test suites.
+#
+# Canonical case count: 0 entries (0 included, 0 excluded).
+# All active tests are defined in exercises/practice/robot-name/RobotName.tests.ps1.
+
+[canonical]
+total = 0
+included = 0
+excluded = 0
+
+# Track-specific test rationales:
+# - "robot has a name": Validates format regex ^[A-Z]{2}\d{3}$ on initial instance creation.
+# - "name is the same each time": Asserts getter idempotency ($robot.Name does not regenerate on read).
+# - "different robot has different name": Tests that subsequent [Robot]::new() calls produce distinct names.
+# - "name can be reset": Asserts calling $robot.Reset() alters the instance name.
+# - "name is valid after many reset": 100 iterations of Reset() preserving format and name transitions.
+# - "robot name are unique": 1000 robot names inserted into a .NET HashSet to verify collision resistance.
