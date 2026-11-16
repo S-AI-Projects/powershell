@@ -1,0 +1,17 @@
+{
+  "tools": {
+    "powershell": "PowerShell 7.7.0",
+    "pester": "6.2.0",
+    "python": "3.14.7"
+  },
+  "course_check_output": "SUCCESS: 13 test cases verified reproducibly.",
+  "learner_stub_unsolved": true,
+  "reference_run": {
+    "returncode": 0,
+    "counts": {
+      "total": 13,
+      "failed": 0,
+      "passed": 13
+    }
+  }
+}
