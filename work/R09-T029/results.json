@@ -1,0 +1,28 @@
+{
+  "tools": {
+    "powershell": "PowerShell 7.7.0",
+    "pester": "6.2.0",
+    "python": "3.14.7"
+  },
+  "runner_tool_output": "OK: Reference passed all 10 cases.\nOK: Deliberately failing reference correctly exited non-zero.\nOK: Zero-test run correctly exited non-zero.\nOK: File hash integrity preserved before and after execution.\nSUCCESS: All isolation and integrity checks passed.",
+  "learner_stub_unsolved": true,
+  "reference_run": {
+    "returncode": 0,
+    "counts": {
+      "total": 10,
+      "failed": 0,
+      "passed": 10
+    }
+  },
+  "file_hashes": {
+    "before": {
+      "RotationalCipher.ps1": "ec924f99e5ee15684580a7d45844502e0de2c8118c4f2cab12b542820756252b",
+      "RotationalCipher.tests.ps1": "1d73dcf404cdc6d62c6d9ac2117dc1dc9a079a84f37e376253f0ecf70884fa4d"
+    },
+    "after": {
+      "RotationalCipher.ps1": "ec924f99e5ee15684580a7d45844502e0de2c8118c4f2cab12b542820756252b",
+      "RotationalCipher.tests.ps1": "1d73dcf404cdc6d62c6d9ac2117dc1dc9a079a84f37e376253f0ecf70884fa4d"
+    },
+    "match": true
+  }
+}
