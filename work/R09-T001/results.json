@@ -1,0 +1,23 @@
+{
+  "task_id": "R09-T001",
+  "exercise": "ledger",
+  "target_uuid": "502c4106-0371-4e7c-a7d8-9ce33f16ccb1",
+  "rationale": "Superseded by 9c70709f-cbbd-4b3b-b367-81d7c6101de4: original input had mismatched dates (2015-01-02 and 2015-01-01); the replacement case correctly uses identical dates (2015-01-01) to test description tie-breaking and is active in Ledger.tests.ps1.",
+  "tests_toml_stats": {
+    "total": 12,
+    "included": 11,
+    "excluded": 1
+  },
+  "pester_results": {
+    "SkippedCount": 0,
+    "FailedCount": 0,
+    "TotalCount": 12,
+    "PassedCount": 12
+  },
+  "tools": {
+    "python": "3.13.15 (v3.13.15:4061bc4c35f, Aug  5 2026, 09:08:51) [Clang 21.0.0 (clang-2100.1.1.101)]",
+    "powershell": "7.7.0",
+    "pester": "6.2.0"
+  },
+  "success": true
+}
