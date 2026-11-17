@@ -1,0 +1,11 @@
+R09-T001 check run
+Target UUID: 502c4106-0371-4e7c-a7d8-9ce33f16ccb1
+Rationale: Superseded by 9c70709f-cbbd-4b3b-b367-81d7c6101de4: original input had mismatched dates (2015-01-02 and 2015-01-01); the replacement case correctly uses identical dates (2015-01-01) to test description tie-breaking and is active in Ledger.tests.ps1.
+Pester execution output:
+
+Running tests from 1 files.
+[+] /var/folders/78/z6b17fqj2zl49bkd8hqhglqh0000gn/T/tmpvo9xmhfq/ledger/Ledger.tests.ps1 408ms (12 tests)
+Tests completed in 416ms
+Tests Passed: 12, Failed: 0, Skipped: 0, Inconclusive: 0, NotRun: 0
+{"SkippedCount":0,"FailedCount":0,"TotalCount":12,"PassedCount":12}
+
