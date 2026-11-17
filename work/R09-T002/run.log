@@ -1,0 +1,8 @@
+R09-T002 Automated Check Log
+Anchor describe: Test Get-BobResponse
+Anchor cases verified: ['asking a question', 'shouting']
+Test summary: {
+  "FailedCount": 0,
+  "TotalCount": 26,
+  "PassedCount": 26
+}
