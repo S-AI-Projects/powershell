@@ -24,10 +24,12 @@ Function Get-ReverseString {
         [Parameter(Position=1, ValueFromPipeline=$true)]
         [string]$Forward
     )
-    $textElements = [Globalization.StringInfo]::GetTextElementEnumerator($Forward)
-    $graphemes = [Collections.Generic.List[String]]::new()
-    while ($textElements.MoveNext()) {
-        $graphemes.Insert(0, $textElements.GetTextElement())
+    # Invariant: preserve multi-byte Unicode characters and grapheme clusters
+    # by enumerating user-perceived text elements rather than individual char units.
+    $elementEnumerator = [System.Globalization.StringInfo]::GetTextElementEnumerator($Forward)
+    $reversedGraphemes = [System.Collections.Generic.List[string]]::new()
+    while ($elementEnumerator.MoveNext()) {
+        $reversedGraphemes.Insert(0, $elementEnumerator.GetTextElement())
     }
-    -join $graphemes
+    return -join $reversedGraphemes
 }
