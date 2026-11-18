@@ -1,0 +1,28 @@
+R09-T009 Automated Check Log
+Learner File SHA256: 015999f02583e6d32cc1d7c32f49fa9bca60483e914d69a4b0841aac1c7b1ea7
+Modes Tested: {
+  "real_reference": {
+    "exit_code": 0,
+    "summary": {
+      "FailedCount": 0,
+      "PassedCount": 11,
+      "TotalCount": 11
+    }
+  },
+  "deliberately_failing": {
+    "exit_code": "failed_as_expected",
+    "summary": {
+      "PassedCount": 0,
+      "TotalCount": 11,
+      "FailedCount": 11
+    }
+  },
+  "empty_selection": {
+    "exit_code": "zero_tests_detected",
+    "summary": {
+      "FailedCount": 0,
+      "TotalCount": 0,
+      "PassedCount": 0
+    }
+  }
+}
