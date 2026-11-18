@@ -1,0 +1,42 @@
+{
+  "task_id": "R09-T009",
+  "exercise": "grains",
+  "learner_file_hash": "015999f02583e6d32cc1d7c32f49fa9bca60483e914d69a4b0841aac1c7b1ea7",
+  "modes_tested": {
+    "real_reference": {
+      "exit_code": 0,
+      "summary": {
+        "FailedCount": 0,
+        "PassedCount": 11,
+        "TotalCount": 11
+      }
+    },
+    "deliberately_failing": {
+      "exit_code": "failed_as_expected",
+      "summary": {
+        "PassedCount": 0,
+        "TotalCount": 11,
+        "FailedCount": 11
+      }
+    },
+    "empty_selection": {
+      "exit_code": "zero_tests_detected",
+      "summary": {
+        "FailedCount": 0,
+        "TotalCount": 0,
+        "PassedCount": 0
+      }
+    }
+  },
+  "named_cases_verified": [
+    "Test Grains.ps1",
+    "grains on square 1",
+    "grains on square 2"
+  ],
+  "tools": {
+    "python": "3.13.15 (v3.13.15:4061bc4c35f, Aug  5 2026, 09:08:51) [Clang 21.0.0 (clang-2100.1.1.101)]",
+    "powershell": "7.7.0",
+    "pester": "6.2.0"
+  },
+  "success": true
+}
