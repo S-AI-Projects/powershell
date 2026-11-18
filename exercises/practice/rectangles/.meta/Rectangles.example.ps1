@@ -27,6 +27,13 @@ Function Get-Rectangles() {
     Param(
         [string[]]$Strings
     )
+    # Complexity:
+    # Time: O(R * C * (R + C) + E_H^2) where R is row count, C is column width,
+    # and E_H <= R * C^2 / 2 is the total number of detected horizontal edges.
+    # Edge extraction checks horizontal and vertical line segments from each '+' vertex.
+    # Rectangle counting iterates over pairs of horizontal edges with O(1) hash lookups
+    # for the matching left and right vertical edges.
+    # Space: O(E_H + E_V) auxiliary memory for edge collections.
     if ($Strings.Count -eq 0) {return 0}
     $validEdges = ExtractEdge $Strings
     CountRectangle @validEdges
