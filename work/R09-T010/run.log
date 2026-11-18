@@ -1,0 +1,32 @@
+R09-T010 Automated Check Log
+Pester Output:
+
+Running tests from 1 files.
+[+] /var/folders/78/z6b17fqj2zl49bkd8hqhglqh0000gn/T/tmpvjdelfok/square-root/SquareRoot.tests.ps1 174ms (6 tests)
+Tests completed in 178ms
+Tests Passed: 6, Failed: 0, Skipped: 0, Inconclusive: 0, NotRun: 0
+{"TotalCount":6,"FailedCount":0,"PassedCount":6}
+
+Decision table cases:
+{
+  "root of 1": {
+    "input": 1,
+    "expected": 1,
+    "status": "Specified"
+  },
+  "root of 4": {
+    "input": 4,
+    "expected": 2,
+    "status": "Specified"
+  },
+  "non-perfect squares": {
+    "input": "e.g. 2, 3",
+    "expected": "N/A",
+    "status": "Unspecified by contract"
+  },
+  "non-positive": {
+    "input": "<= 0",
+    "expected": "N/A",
+    "status": "Unspecified by contract"
+  }
+}
