@@ -1,0 +1,30 @@
+{
+  "task_id": "R09-T008",
+  "exercise": "largest-series-product",
+  "declared_files": [
+    "LargestSeriesProduct.ps1",
+    "LargestSeriesProduct.tests.ps1",
+    ".meta/LargestSeriesProduct.example.ps1"
+  ],
+  "fixtures_tested": [
+    "missing_reference_rejected",
+    "missing_test_rejected",
+    "traversal_rejected"
+  ],
+  "test_summary": {
+    "FailedCount": 0,
+    "TotalCount": 13,
+    "PassedCount": 13
+  },
+  "named_cases_verified": [
+    "Test LargestSeriesProduct Cases",
+    "finds the largest product if span equals length",
+    "can find the largest product of 2 with numbers in order"
+  ],
+  "tools": {
+    "python": "3.13.15 (v3.13.15:4061bc4c35f, Aug  5 2026, 09:08:51) [Clang 21.0.0 (clang-2100.1.1.101)]",
+    "powershell": "7.7.0",
+    "pester": "6.2.0"
+  },
+  "success": true
+}
