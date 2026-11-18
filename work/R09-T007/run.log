@@ -1,0 +1,8 @@
+R09-T007 Automated Check Log
+Micro-example 1 (Range countdown): 1,0
+Micro-example 2 (For loop guard): 0
+Pester Summary: {
+  "PassedCount": 14,
+  "FailedCount": 0,
+  "TotalCount": 14
+}
