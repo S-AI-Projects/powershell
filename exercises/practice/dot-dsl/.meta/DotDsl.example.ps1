@@ -87,6 +87,7 @@ Class Graph {
     }
 
     Graph([object[]] $Data){
+        # Each += preserves category order but copies its current array, so k same-kind items copy 0+...+(k-1) slots.
         switch ($Data) {
             {$_ -is [Node]} { $this.Nodes += $_ }
             {$_ -is [Edge]} { $this.Edges += $_ }

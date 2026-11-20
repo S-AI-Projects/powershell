@@ -1,0 +1,120 @@
+{
+  "algorithmCounts": {
+    "existingNodeSlotsCopied": "n(n-1)/2",
+    "nodeAppends": "n",
+    "recordVisits": "n"
+  },
+  "benchmark": {
+    "sizes": [
+      {
+        "actual": {
+          "attrs": 0,
+          "edges": 0,
+          "nodes": 10
+        },
+        "existingSlotsCopied": 45,
+        "expected": {
+          "attrs": 0,
+          "edges": 0,
+          "nodes": 10
+        },
+        "inputSize": 10,
+        "medianMilliseconds": 0.1572,
+        "nodeAppends": 10,
+        "recordVisits": 10,
+        "repetitions": 5,
+        "timesMilliseconds": [
+          0.5687,
+          0.1963,
+          0.1517,
+          0.1572,
+          0.1439
+        ]
+      },
+      {
+        "actual": {
+          "attrs": 0,
+          "edges": 0,
+          "nodes": 50
+        },
+        "existingSlotsCopied": 1225,
+        "expected": {
+          "attrs": 0,
+          "edges": 0,
+          "nodes": 50
+        },
+        "inputSize": 50,
+        "medianMilliseconds": 0.6477,
+        "nodeAppends": 50,
+        "recordVisits": 50,
+        "repetitions": 5,
+        "timesMilliseconds": [
+          0.6379,
+          0.6407,
+          0.6477,
+          0.6554,
+          0.6845
+        ]
+      },
+      {
+        "actual": {
+          "attrs": 0,
+          "edges": 0,
+          "nodes": 100
+        },
+        "existingSlotsCopied": 4950,
+        "expected": {
+          "attrs": 0,
+          "edges": 0,
+          "nodes": 100
+        },
+        "inputSize": 100,
+        "medianMilliseconds": 1.805,
+        "nodeAppends": 100,
+        "recordVisits": 100,
+        "repetitions": 5,
+        "timesMilliseconds": [
+          1.8256,
+          1.805,
+          7.9873,
+          1.7396,
+          1.7277
+        ]
+      }
+    ],
+    "timingScope": "Graph constructor only; class load, process startup, input creation, preflight and warm-up excluded"
+  },
+  "checkedAtUtc": "2026-11-20T09:05:08.037023+00:00",
+  "exercise": "dot-dsl",
+  "inputDefinition": "Number of Node records passed to Graph([object[]] $Data)",
+  "learnerSolutionHashAfter": "4b42a0596d2e38d74363e50423e4e557058a741baadbc90fcc7807a702999d44",
+  "learnerSolutionHashBefore": "4b42a0596d2e38d74363e50423e4e557058a741baadbc90fcc7807a702999d44",
+  "pester": {
+    "exitCode": 0,
+    "failedCount": 0,
+    "passedCount": 8,
+    "skippedCount": 0,
+    "testNames": [
+      "empty graph",
+      "graph with one node",
+      "graph with one node with keywords",
+      "graph with one edge",
+      "graph with one edge with attribute",
+      "graph with one attribute",
+      "graph with attributes",
+      "unknown item in graph throw error"
+    ],
+    "totalCount": 8
+  },
+  "pesterVersion": "5.7.1",
+  "powerShellVersion": "7.7.0",
+  "repetitionsPerSize": 5,
+  "sizes": [
+    10,
+    50,
+    100
+  ],
+  "status": "passed",
+  "task": "R09-T035",
+  "timingScope": "Graph constructor only; excludes process startup, class loading, input creation, preflight and warm-up"
+}
