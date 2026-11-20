@@ -11,12 +11,15 @@
 
 [c557c16d-26c1-4e06-827c-f6602cd0785c]
 description = "Create robot -> at origin facing north"
+comment = "Included: this canonical case checks the explicit NORTH, 0, 0 constructor path. The no-argument default constructor is covered separately by the PowerShell test suite."
 
 [bf0dffce-f11c-4cdb-8a5e-2c89d8a5a67d]
 description = "Create robot -> at negative position facing south"
+comment = "Included: negative integer coordinates and SOUTH are valid inputs on the exercise's infinite grid; the reference preserves both values."
 
 [8cbd0086-6392-4680-b9b9-73cf491e67e5]
 description = "Rotating clockwise -> changes north to east"
+comment = "Included: NORTH to EAST is a supported right turn; the reference's ordered Direction enum and modulo-four rotation implement this transition."
 
 [8abc87fc-eab2-4276-93b7-9c009e866ba1]
 description = "Rotating clockwise -> changes east to south"

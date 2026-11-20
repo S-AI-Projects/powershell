@@ -1,0 +1,11 @@
+$ selected-case probe
+
+
+$ /private/tmp/sai-pwsh/pwsh -NoLogo -NoProfile -NonInteractive -File /var/folders/h3/jm4rwdvd0kj_w654r9k_8_380000gn/T/robot-simulator-R09-T031-mkwixj3o/run-pester.ps1 -TestPath /var/folders/h3/jm4rwdvd0kj_w654r9k_8_380000gn/T/robot-simulator-R09-T031-mkwixj3o/robot-simulator/RobotSimulator.tests.ps1 -ResultPath /var/folders/h3/jm4rwdvd0kj_w654r9k_8_380000gn/T/robot-simulator-R09-T031-mkwixj3o/pester-results.json
+
+Starting discovery in 1 files.
+Discovery found 26 tests in 119ms.
+Running tests.
+[+] /var/folders/h3/jm4rwdvd0kj_w654r9k_8_380000gn/T/robot-simulator-R09-T031-mkwixj3o/robot-simulator/RobotSimulator.tests.ps1 519ms (207ms|206ms)
+Tests completed in 526ms
+Tests Passed: 26, Failed: 0, Skipped: 0, Inconclusive: 0, NotRun: 0

@@ -1,0 +1,293 @@
+{
+  "canonicalCases": {
+    "countAfter": 18,
+    "countBefore": 18,
+    "excludedAfter": 0,
+    "excludedBefore": 0
+  },
+  "configuredFiles": {
+    "example": ".meta/RobotSimulator.example.ps1",
+    "solution": "RobotSimulator.ps1",
+    "test": "RobotSimulator.tests.ps1"
+  },
+  "exercise": "exercises/practice/robot-simulator",
+  "issue": 4,
+  "learnerSolutionSha256After": "4bf394aaa24347739d694fa6cb165b7b87dea2b5261b678accbaf1119651b369",
+  "learnerSolutionSha256Before": "4bf394aaa24347739d694fa6cb165b7b87dea2b5261b678accbaf1119651b369",
+  "pester": {
+    "exitCode": 0,
+    "failed": 0,
+    "passed": 26,
+    "pesterVersion": "5.7.1",
+    "skipped": 0,
+    "tests": [
+      {
+        "name": "at defaults origin without inputs",
+        "result": "Passed"
+      },
+      {
+        "name": "at origin facing north",
+        "result": "Passed"
+      },
+      {
+        "name": "at negative position facing south",
+        "result": "Passed"
+      },
+      {
+        "name": "at positive position facing west",
+        "result": "Passed"
+      },
+      {
+        "name": "at negative position facing east",
+        "result": "Passed"
+      },
+      {
+        "name": "clockwise -> changes north to east",
+        "result": "Passed"
+      },
+      {
+        "name": "clockwise -> changes east to south",
+        "result": "Passed"
+      },
+      {
+        "name": "clockwise -> changes south to west",
+        "result": "Passed"
+      },
+      {
+        "name": "clockwise -> changes west to north",
+        "result": "Passed"
+      },
+      {
+        "name": "counter-clockwise -> changes north to west",
+        "result": "Passed"
+      },
+      {
+        "name": "counter-clockwise -> changes west to south",
+        "result": "Passed"
+      },
+      {
+        "name": "counter-clockwise -> changes south to east",
+        "result": "Passed"
+      },
+      {
+        "name": "counter-clockwise -> changes east to north",
+        "result": "Passed"
+      },
+      {
+        "name": "facing north increments Y",
+        "result": "Passed"
+      },
+      {
+        "name": "facing south decrements Y",
+        "result": "Passed"
+      },
+      {
+        "name": "facing east increments X",
+        "result": "Passed"
+      },
+      {
+        "name": "facing west decrements X",
+        "result": "Passed"
+      },
+      {
+        "name": "moving east and north",
+        "result": "Passed"
+      },
+      {
+        "name": "moving west and north",
+        "result": "Passed"
+      },
+      {
+        "name": "moving west and south",
+        "result": "Passed"
+      },
+      {
+        "name": "moving east and north",
+        "result": "Passed"
+      },
+      {
+        "name": "create robot with invalid direction",
+        "result": "Passed"
+      },
+      {
+        "name": "create robot with invalid X coordinate",
+        "result": "Passed"
+      },
+      {
+        "name": "create robot with invalid Y coordinate",
+        "result": "Passed"
+      },
+      {
+        "name": "move with invalid instruction",
+        "result": "Passed"
+      },
+      {
+        "name": "move with series of invalid instruction",
+        "result": "Passed"
+      }
+    ],
+    "total": 26
+  },
+  "selectedExpected": {
+    "8cbd0086-6392-4680-b9b9-73cf491e67e5": {
+      "expected": {
+        "direction": "EAST",
+        "position": [
+          0,
+          0
+        ]
+      },
+      "input": {
+        "constructor": "Robot('NORTH', 0, 0)",
+        "instruction": "R"
+      },
+      "name": "clockwise -> changes north to east"
+    },
+    "bf0dffce-f11c-4cdb-8a5e-2c89d8a5a67d": {
+      "expected": {
+        "direction": "SOUTH",
+        "position": [
+          -1,
+          -1
+        ]
+      },
+      "input": {
+        "constructor": "Robot('SOUTH', -1, -1)"
+      },
+      "name": "at negative position facing south"
+    },
+    "c557c16d-26c1-4e06-827c-f6602cd0785c": {
+      "expected": {
+        "direction": "NORTH",
+        "position": [
+          0,
+          0
+        ]
+      },
+      "input": {
+        "constructor": "Robot('NORTH', 0, 0)"
+      },
+      "name": "at origin facing north"
+    },
+    "defaultConstructor": {
+      "expected": {
+        "direction": "NORTH",
+        "position": [
+          0,
+          0
+        ]
+      },
+      "input": {
+        "constructor": "Robot()"
+      },
+      "name": "at defaults origin without inputs"
+    }
+  },
+  "selectedOutcomes": {
+    "8cbd0086-6392-4680-b9b9-73cf491e67e5": {
+      "actual": {
+        "direction": "EAST",
+        "position": [
+          0,
+          0
+        ]
+      },
+      "expected": {
+        "direction": "EAST",
+        "position": [
+          0,
+          0
+        ]
+      },
+      "input": {
+        "constructor": "Robot('NORTH', 0, 0)",
+        "instruction": "R"
+      },
+      "name": "clockwise -> changes north to east",
+      "passed": true
+    },
+    "bf0dffce-f11c-4cdb-8a5e-2c89d8a5a67d": {
+      "actual": {
+        "direction": "SOUTH",
+        "position": [
+          -1,
+          -1
+        ]
+      },
+      "expected": {
+        "direction": "SOUTH",
+        "position": [
+          -1,
+          -1
+        ]
+      },
+      "input": {
+        "constructor": "Robot('SOUTH', -1, -1)"
+      },
+      "name": "at negative position facing south",
+      "passed": true
+    },
+    "c557c16d-26c1-4e06-827c-f6602cd0785c": {
+      "actual": {
+        "direction": "NORTH",
+        "position": [
+          0,
+          0
+        ]
+      },
+      "expected": {
+        "direction": "NORTH",
+        "position": [
+          0,
+          0
+        ]
+      },
+      "input": {
+        "constructor": "Robot('NORTH', 0, 0)"
+      },
+      "name": "at origin facing north",
+      "passed": true
+    },
+    "defaultConstructor": {
+      "actual": {
+        "direction": "NORTH",
+        "position": [
+          0,
+          0
+        ]
+      },
+      "expected": {
+        "direction": "NORTH",
+        "position": [
+          0,
+          0
+        ]
+      },
+      "input": {
+        "constructor": "Robot()"
+      },
+      "name": "at defaults origin without inputs",
+      "passed": true
+    }
+  },
+  "selectedPesterResults": {
+    "at defaults origin without inputs": [
+      "Passed"
+    ],
+    "at negative position facing south": [
+      "Passed"
+    ],
+    "at origin facing north": [
+      "Passed"
+    ],
+    "clockwise -> changes north to east": [
+      "Passed"
+    ]
+  },
+  "status": "passed",
+  "toolVersions": {
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+    "pwsh": "7.7.0",
+    "python": "3.14.7"
+  }
+}
