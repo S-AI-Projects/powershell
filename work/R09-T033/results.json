@@ -1,0 +1,98 @@
+{
+  "checkedAtUtc": "2026-11-20T08:52:38.871932+00:00",
+  "exercise": "sum-of-multiples",
+  "learnerSolutionHashAfter": "b86251828fe67eb6417ecaba828c14f97950755e03800f1e08a775e831123ad2",
+  "learnerSolutionHashBefore": "b86251828fe67eb6417ecaba828c14f97950755e03800f1e08a775e831123ad2",
+  "mutantPester": {
+    "exitCode": 1,
+    "failedCount": 6,
+    "passedCount": 7,
+    "skippedCount": 0,
+    "totalCount": 13
+  },
+  "mutantProbeResults": [
+    {
+      "actual": 42,
+      "expected": 30,
+      "limit": 15,
+      "matchesExpected": false,
+      "multiples": [
+        4,
+        6
+      ],
+      "name": "existing canonical case"
+    },
+    {
+      "actual": 5,
+      "expected": 3,
+      "limit": 3,
+      "matchesExpected": false,
+      "multiples": [
+        1,
+        2
+      ],
+      "name": "reduced diagnostic"
+    }
+  ],
+  "mutation": "Remove the inner-loop break so a value shared by factors is added for every matching factor.",
+  "pesterVersion": "5.7.1",
+  "powerShellVersion": "7.7.0",
+  "probes": [
+    {
+      "expected": 30,
+      "limit": 15,
+      "multiples": [
+        4,
+        6
+      ],
+      "name": "existing canonical case"
+    },
+    {
+      "expected": 3,
+      "limit": 3,
+      "multiples": [
+        1,
+        2
+      ],
+      "name": "reduced diagnostic"
+    }
+  ],
+  "referencePester": {
+    "exitCode": 0,
+    "failedCount": 0,
+    "passedCount": 13,
+    "skippedCount": 0,
+    "totalCount": 13
+  },
+  "referenceProbeResults": [
+    {
+      "actual": 30,
+      "expected": 30,
+      "limit": 15,
+      "matchesExpected": true,
+      "multiples": [
+        4,
+        6
+      ],
+      "name": "existing canonical case"
+    },
+    {
+      "actual": 3,
+      "expected": 3,
+      "limit": 3,
+      "matchesExpected": true,
+      "multiples": [
+        1,
+        2
+      ],
+      "name": "reduced diagnostic"
+    }
+  ],
+  "rejectingCase": {
+    "description": "factors not relatively prime",
+    "id": "2d0d5faa-f177-4ad6-bde9-ebb865083751",
+    "testName": "Given the factors 4 6 and to a limit of 15 the sum of multiples should be 30"
+  },
+  "status": "passed",
+  "task": "R09-T033"
+}

@@ -1,0 +1,68 @@
+$ pwsh -NoProfile -NonInteractive -File reference-pester.ps1
+Pester v5.7.1
+
+Starting discovery in 1 files.
+Discovery found 13 tests in 97ms.
+Running tests.
+
+Running tests from '/var/folders/h3/jm4rwdvd0kj_w654r9k_8_380000gn/T/sum-of-multiples-R09-T033-sfw0l8mt/reference/SumOfMultiples.tests.ps1'
+Describing Get-SumOfMultiples Tests
+  [+] Given the factors 3 5 and to a limit of 1 the sum of multiples should be 0 63ms (47ms|16ms)
+  [+] Given the factors 3 5 and to a limit of 4 the sum of multiples should be 3 3ms (2ms|1ms)
+  [+] Given the factors 3 and to a limit of 7 the sum of multiples should be 9 2ms (2ms|1ms)
+  [+] Given the factors 3 5 and to a limit of 10 the sum of multiples should be 23 9ms (8ms|1ms)
+  [+] Given the factors 3 5 and to a limit of 100 the sum of multiples should be 2318 2ms (1ms|1ms)
+  [+] Given the factors 3 5 and to a limit of 1000 the sum of multiples should be 233168 3ms (2ms|1ms)
+  [+] Given the factors 7 13 17 and to a limit of 20 the sum of multiples should be 51 2ms (1ms|1ms)
+  [+] Given the factors 4 6 and to a limit of 15 the sum of multiples should be 30 2ms (1ms|1ms)
+  [+] Given the factors 5 6 8 and to a limit of 150 the sum of multiples should be 4419 2ms (1ms|1ms)
+  [+] Given the factors 5 25 and to a limit of 51 the sum of multiples should be 275 5ms (4ms|1ms)
+  [+] Given the factors 43 47 and to a limit of 10000 the sum of multiples should be 2203160 3ms (3ms|1ms)
+  [+] Given the factors 1 and to a limit of 100 the sum of multiples should be 4950 2ms (1ms|1ms)
+  [+] Given the factors  and to a limit of 1000 the sum of multiples should be 0 3ms (2ms|1ms)
+Tests completed in 362ms
+Tests Passed: 13, Failed: 0, Skipped: 0, Inconclusive: 0, NotRun: 0
+$ pwsh -NoProfile -NonInteractive -File mutant-pester.ps1 (expected assertion failures)
+Pester v5.7.1
+
+Starting discovery in 1 files.
+Discovery found 13 tests in 96ms.
+Running tests.
+
+Running tests from '/var/folders/h3/jm4rwdvd0kj_w654r9k_8_380000gn/T/sum-of-multiples-R09-T033-sfw0l8mt/mutant/SumOfMultiples.tests.ps1'
+Describing Get-SumOfMultiples Tests
+  [+] Given the factors 3 5 and to a limit of 1 the sum of multiples should be 0 62ms (47ms|15ms)
+  [+] Given the factors 3 5 and to a limit of 4 the sum of multiples should be 3 3ms (2ms|1ms)
+  [+] Given the factors 3 and to a limit of 7 the sum of multiples should be 9 2ms (1ms|1ms)
+  [+] Given the factors 3 5 and to a limit of 10 the sum of multiples should be 23 9ms (8ms|1ms)
+  [-] Given the factors 3 5 and to a limit of 100 the sum of multiples should be 2318 18ms (17ms|1ms)
+   Expected exactly 2318, but got 2633.
+   at Get-SumOfMultiples -Multiples $Multiples -Limit $Limit | Should -BeExactly $ExpectedResult, /var/folders/h3/jm4rwdvd0kj_w654r9k_8_380000gn/T/sum-of-multiples-R09-T033-sfw0l8mt/mutant/SumOfMultiples.tests.ps1:27
+   at <ScriptBlock>, /var/folders/h3/jm4rwdvd0kj_w654r9k_8_380000gn/T/sum-of-multiples-R09-T033-sfw0l8mt/mutant/SumOfMultiples.tests.ps1:27
+  [-] Given the factors 3 5 and to a limit of 1000 the sum of multiples should be 233168 3ms (3ms|1ms)
+   Expected exactly 233168, but got 266333.
+   at Get-SumOfMultiples -Multiples $Multiples -Limit $Limit | Should -BeExactly $ExpectedResult, /var/folders/h3/jm4rwdvd0kj_w654r9k_8_380000gn/T/sum-of-multiples-R09-T033-sfw0l8mt/mutant/SumOfMultiples.tests.ps1:27
+   at <ScriptBlock>, /var/folders/h3/jm4rwdvd0kj_w654r9k_8_380000gn/T/sum-of-multiples-R09-T033-sfw0l8mt/mutant/SumOfMultiples.tests.ps1:27
+  [+] Given the factors 7 13 17 and to a limit of 20 the sum of multiples should be 51 2ms (1ms|1ms)
+  [-] Given the factors 4 6 and to a limit of 15 the sum of multiples should be 30 3ms (2ms|1ms)
+   Expected exactly 30, but got 42.
+   at Get-SumOfMultiples -Multiples $Multiples -Limit $Limit | Should -BeExactly $ExpectedResult, /var/folders/h3/jm4rwdvd0kj_w654r9k_8_380000gn/T/sum-of-multiples-R09-T033-sfw0l8mt/mutant/SumOfMultiples.tests.ps1:27
+   at <ScriptBlock>, /var/folders/h3/jm4rwdvd0kj_w654r9k_8_380000gn/T/sum-of-multiples-R09-T033-sfw0l8mt/mutant/SumOfMultiples.tests.ps1:27
+  [-] Given the factors 5 6 8 and to a limit of 150 the sum of multiples should be 4419 3ms (2ms|1ms)
+   Expected exactly 4419, but got 5343.
+   at Get-SumOfMultiples -Multiples $Multiples -Limit $Limit | Should -BeExactly $ExpectedResult, /var/folders/h3/jm4rwdvd0kj_w654r9k_8_380000gn/T/sum-of-multiples-R09-T033-sfw0l8mt/mutant/SumOfMultiples.tests.ps1:27
+   at <ScriptBlock>, /var/folders/h3/jm4rwdvd0kj_w654r9k_8_380000gn/T/sum-of-multiples-R09-T033-sfw0l8mt/mutant/SumOfMultiples.tests.ps1:27
+  [-] Given the factors 5 25 and to a limit of 51 the sum of multiples should be 275 2ms (2ms|1ms)
+   Expected exactly 275, but got 350.
+   at Get-SumOfMultiples -Multiples $Multiples -Limit $Limit | Should -BeExactly $ExpectedResult, /var/folders/h3/jm4rwdvd0kj_w654r9k_8_380000gn/T/sum-of-multiples-R09-T033-sfw0l8mt/mutant/SumOfMultiples.tests.ps1:27
+   at <ScriptBlock>, /var/folders/h3/jm4rwdvd0kj_w654r9k_8_380000gn/T/sum-of-multiples-R09-T033-sfw0l8mt/mutant/SumOfMultiples.tests.ps1:27
+  [-] Given the factors 43 47 and to a limit of 10000 the sum of multiples should be 2203160 5ms (4ms|1ms)
+   Expected exactly 2203160, but got 2223370.
+   at Get-SumOfMultiples -Multiples $Multiples -Limit $Limit | Should -BeExactly $ExpectedResult, /var/folders/h3/jm4rwdvd0kj_w654r9k_8_380000gn/T/sum-of-multiples-R09-T033-sfw0l8mt/mutant/SumOfMultiples.tests.ps1:27
+   at <ScriptBlock>, /var/folders/h3/jm4rwdvd0kj_w654r9k_8_380000gn/T/sum-of-multiples-R09-T033-sfw0l8mt/mutant/SumOfMultiples.tests.ps1:27
+  [+] Given the factors 1 and to a limit of 100 the sum of multiples should be 4950 3ms (2ms|1ms)
+  [+] Given the factors  and to a limit of 1000 the sum of multiples should be 0 3ms (2ms|1ms)
+Tests completed in 417ms
+Tests Passed: 7, Failed: 6, Skipped: 0, Inconclusive: 0, NotRun: 0
+Reference diagnostic probes: [{"actual": 30, "expected": 30, "limit": 15, "matchesExpected": true, "multiples": [4, 6], "name": "existing canonical case"}, {"actual": 3, "expected": 3, "limit": 3, "matchesExpected": true, "multiples": [1, 2], "name": "reduced diagnostic"}]
+Mutant diagnostic probes: [{"actual": 42, "expected": 30, "limit": 15, "matchesExpected": false, "multiples": [4, 6], "name": "existing canonical case"}, {"actual": 5, "expected": 3, "limit": 3, "matchesExpected": false, "multiples": [1, 2], "name": "reduced diagnostic"}]
