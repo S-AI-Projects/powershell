@@ -1,0 +1,80 @@
+{
+  "checkedAtUtc": "2026-11-20T09:32:29.749879+00:00",
+  "exercise": "intergalactic-transmission",
+  "learnerSolutionHashAfter": "2557da0e412ab5c5f58ac362a3f585c9aa0ff1cf6eec2e9b950fdea6c6d997b3",
+  "learnerSolutionHashBefore": "2557da0e412ab5c5f58ac362a3f585c9aa0ff1cf6eec2e9b950fdea6c6d997b3",
+  "pester": {
+    "declaredTestCount": 26,
+    "exitCode": 0,
+    "failedCount": 0,
+    "passedCount": 26,
+    "probes": [
+      {
+        "actual": [],
+        "expected": [],
+        "input": "@()",
+        "matchesExpected": true,
+        "name": "transmit empty message"
+      },
+      {
+        "actual": [],
+        "expected": [],
+        "input": "@()",
+        "matchesExpected": true,
+        "name": "receive empty message"
+      },
+      {
+        "actual": [
+          0,
+          0
+        ],
+        "expected": [
+          0,
+          0
+        ],
+        "input": "@(0x00)",
+        "matchesExpected": true,
+        "name": "transmit zero byte"
+      }
+    ],
+    "skippedCount": 0,
+    "testNames": [
+      "empty message",
+      "0x00 is transmitted as 0x0000",
+      "0x02 is transmitted as 0x0300",
+      "0x06 is transmitted as 0x0600",
+      "0x05 is transmitted as 0x0581",
+      "0x29 is transmitted as 0x2881",
+      "0xc001c0de is transmitted as 0xc000711be1",
+      "six byte message",
+      "seven byte message",
+      "eight byte message",
+      "twenty byte message",
+      "empty message",
+      "zero message",
+      "0x0300 is decoded to 0x02",
+      "0x0581 is decoded to 0x05",
+      "0x2881 is decoded to 0x29",
+      "first byte has wrong parity",
+      "second byte has wrong parity",
+      "0xcf4b00 is decoded to 0xce94",
+      "0xe2566500 is decoded to 0xe2ad90",
+      "six byte message",
+      "seven byte message",
+      "last byte has wrong parity",
+      "eight byte message",
+      "twenty byte message",
+      "wrong parity on 16th byte"
+    ],
+    "totalCount": 26
+  },
+  "pesterVersion": "5.7.1",
+  "powerShellVersion": "7.7.0",
+  "selectedCanonicalCases": {
+    "9a8084dd-3336-474c-90cb-8a852524604d": "decode received messages -> empty message",
+    "ee27ea2d-8999-4f23-9275-8f6879545f86": "calculate transmit sequences -> 0x00 is transmitted as 0x0000",
+    "f99d4046-b429-4582-9324-f0bcac7ab51c": "calculate transmit sequences -> empty message"
+  },
+  "status": "passed",
+  "task": "R09-T040"
+}
