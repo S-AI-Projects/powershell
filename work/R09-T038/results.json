@@ -1,0 +1,87 @@
+{
+  "checkedAtUtc": "2026-11-20T09:21:11.133597+00:00",
+  "exercise": "isbn-verifier",
+  "invalidFixtures": [
+    {
+      "exitCode": 1,
+      "expectedFailure": "does not exist",
+      "name": "missing-reference",
+      "rejected": true
+    },
+    {
+      "exitCode": 1,
+      "expectedFailure": "does not exist",
+      "name": "missing-test",
+      "rejected": true
+    },
+    {
+      "exitCode": 1,
+      "expectedFailure": "escapes exercise root",
+      "name": "outside-exercise-path",
+      "rejected": true
+    }
+  ],
+  "learnerSolutionHashAfter": "aa8a546c408ec05b656972ac8764fe840ccbd0a1cadd0dfac262ae5cdd58f3cf",
+  "learnerSolutionHashBefore": "aa8a546c408ec05b656972ac8764fe840ccbd0a1cadd0dfac262ae5cdd58f3cf",
+  "metadataValidation": {
+    "editorFilesDeclared": false,
+    "files": {
+      "example": [
+        ".meta/IsbnVerifier.example.ps1"
+      ],
+      "solution": [
+        "IsbnVerifier.ps1"
+      ],
+      "test": [
+        "IsbnVerifier.tests.ps1"
+      ]
+    },
+    "passed": true
+  },
+  "pester": {
+    "exitCode": 0,
+    "failedCount": 0,
+    "passedCount": 21,
+    "probes": [
+      {
+        "actual": true,
+        "expected": true,
+        "input": "3-598-21508-8"
+      },
+      {
+        "actual": false,
+        "expected": false,
+        "input": "3-598-21508-9"
+      }
+    ],
+    "skippedCount": 0,
+    "testNames": [
+      "valid isbn",
+      "invalid isbn check digit",
+      "valid isbn with a check digit of 10",
+      "check digit is a character other than X",
+      "invalid check digit in isbn is not treated as zero",
+      "invalid character in isbn is not treated as zero",
+      "X is only valid as a check digit",
+      "only one check digit is allowed",
+      "X is not substituted by the value 10",
+      "valid isbn without separating dashes",
+      "isbn without separating dashes and X as check digit",
+      "isbn without check digit and dashes",
+      "too long isbn and no dashes",
+      "too short isbn",
+      "isbn without check digit",
+      "check digit of X should not be used for 0",
+      "empty isbn",
+      "input is 9 characters",
+      "invalid characters are not ignored after checking length",
+      "invalid characters are not ignored before checking length",
+      "input is too long but contains a valid isbn"
+    ],
+    "totalCount": 21
+  },
+  "pesterVersion": "5.7.1",
+  "powerShellVersion": "7.7.0",
+  "status": "passed",
+  "task": "R09-T038"
+}
