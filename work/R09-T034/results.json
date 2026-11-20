@@ -1,0 +1,403 @@
+{
+  "afterOutputs": [
+    {
+      "actual": [],
+      "expected": [],
+      "input": "@()",
+      "name": "empty",
+      "passed": true
+    },
+    {
+      "actual": [
+        1,
+        2,
+        3
+      ],
+      "expected": [
+        1,
+        2,
+        3
+      ],
+      "input": "@(1, 2, 3)",
+      "name": "no nesting",
+      "passed": true
+    },
+    {
+      "actual": [],
+      "expected": [],
+      "input": "@(@(@()))",
+      "name": "flattens a nested array",
+      "passed": true
+    },
+    {
+      "actual": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "expected": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "input": "@(1, @(2, 3, 4, 5, 6, 7), 8)",
+      "name": "flattens array with just integers present",
+      "passed": true
+    },
+    {
+      "actual": [
+        0,
+        2,
+        2,
+        3,
+        8,
+        100,
+        4,
+        50,
+        -2
+      ],
+      "expected": [
+        0,
+        2,
+        2,
+        3,
+        8,
+        100,
+        4,
+        50,
+        -2
+      ],
+      "input": "@(0, 2, @(@(2, 3), 8, 100, 4, @(@(@(50)))), -2)",
+      "name": "5 level nesting",
+      "passed": true
+    },
+    {
+      "actual": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "expected": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "input": "@(1, @(2, 3, 4, 5, 6, 7), 8)",
+      "name": "6 level nesting",
+      "passed": true
+    },
+    {
+      "actual": [
+        1,
+        2
+      ],
+      "expected": [
+        1,
+        2
+      ],
+      "input": "@(1, 2, )",
+      "name": "null values are omitted from the final result",
+      "passed": true
+    },
+    {
+      "actual": [
+        5
+      ],
+      "expected": [
+        5
+      ],
+      "input": "@(, , 5)",
+      "name": "consecutive null values at the front of the array are omitted from the final result",
+      "passed": true
+    },
+    {
+      "actual": [
+        1,
+        4
+      ],
+      "expected": [
+        1,
+        4
+      ],
+      "input": "@(1, , , 4)",
+      "name": "consecutive null values in the middle of the array are omitted from the final result",
+      "passed": true
+    },
+    {
+      "actual": [
+        0,
+        2,
+        2,
+        3,
+        8,
+        100,
+        -2
+      ],
+      "expected": [
+        0,
+        2,
+        2,
+        3,
+        8,
+        100,
+        -2
+      ],
+      "input": "@(0, 2, @(@(2, 3), 8, @(@(100)), , @(@())), -2)",
+      "name": "6 level nest array with null values",
+      "passed": true
+    },
+    {
+      "actual": [],
+      "expected": [],
+      "input": "@(, @(@(@())), , , @(@(, ), ), )",
+      "name": "all values in nested array are null",
+      "passed": true
+    }
+  ],
+  "afterPester": {
+    "exitCode": 0,
+    "failedCount": 0,
+    "passedCount": 11,
+    "skippedCount": 0,
+    "testNames": [
+      "empty",
+      "no nesting",
+      "flattens a nested array",
+      "flattens array with just integers present",
+      "5 level nesting",
+      "6 level nesting",
+      "null values are omitted from the final result",
+      "consecutive null values at the front of the array are omitted from the final result",
+      "consecutive null values in the middle of the array are omitted from the final result",
+      "6 level nest array with null values",
+      "all values in nested array are null"
+    ],
+    "totalCount": 11
+  },
+  "beforeOutputs": [
+    {
+      "actual": [],
+      "expected": [],
+      "input": "@()",
+      "name": "empty",
+      "passed": true
+    },
+    {
+      "actual": [
+        1,
+        2,
+        3
+      ],
+      "expected": [
+        1,
+        2,
+        3
+      ],
+      "input": "@(1, 2, 3)",
+      "name": "no nesting",
+      "passed": true
+    },
+    {
+      "actual": [],
+      "expected": [],
+      "input": "@(@(@()))",
+      "name": "flattens a nested array",
+      "passed": true
+    },
+    {
+      "actual": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "expected": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "input": "@(1, @(2, 3, 4, 5, 6, 7), 8)",
+      "name": "flattens array with just integers present",
+      "passed": true
+    },
+    {
+      "actual": [
+        0,
+        2,
+        2,
+        3,
+        8,
+        100,
+        4,
+        50,
+        -2
+      ],
+      "expected": [
+        0,
+        2,
+        2,
+        3,
+        8,
+        100,
+        4,
+        50,
+        -2
+      ],
+      "input": "@(0, 2, @(@(2, 3), 8, 100, 4, @(@(@(50)))), -2)",
+      "name": "5 level nesting",
+      "passed": true
+    },
+    {
+      "actual": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "expected": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "input": "@(1, @(2, 3, 4, 5, 6, 7), 8)",
+      "name": "6 level nesting",
+      "passed": true
+    },
+    {
+      "actual": [
+        1,
+        2
+      ],
+      "expected": [
+        1,
+        2
+      ],
+      "input": "@(1, 2, )",
+      "name": "null values are omitted from the final result",
+      "passed": true
+    },
+    {
+      "actual": [
+        5
+      ],
+      "expected": [
+        5
+      ],
+      "input": "@(, , 5)",
+      "name": "consecutive null values at the front of the array are omitted from the final result",
+      "passed": true
+    },
+    {
+      "actual": [
+        1,
+        4
+      ],
+      "expected": [
+        1,
+        4
+      ],
+      "input": "@(1, , , 4)",
+      "name": "consecutive null values in the middle of the array are omitted from the final result",
+      "passed": true
+    },
+    {
+      "actual": [
+        0,
+        2,
+        2,
+        3,
+        8,
+        100,
+        -2
+      ],
+      "expected": [
+        0,
+        2,
+        2,
+        3,
+        8,
+        100,
+        -2
+      ],
+      "input": "@(0, 2, @(@(2, 3), 8, @(@(100)), , @(@())), -2)",
+      "name": "6 level nest array with null values",
+      "passed": true
+    },
+    {
+      "actual": [],
+      "expected": [],
+      "input": "@(, @(@(@())), , , @(@(, ), ), )",
+      "name": "all values in nested array are null",
+      "passed": true
+    }
+  ],
+  "beforePester": {
+    "exitCode": 0,
+    "failedCount": 0,
+    "passedCount": 11,
+    "skippedCount": 0,
+    "testNames": [
+      "empty",
+      "no nesting",
+      "flattens a nested array",
+      "flattens array with just integers present",
+      "5 level nesting",
+      "6 level nesting",
+      "null values are omitted from the final result",
+      "consecutive null values at the front of the array are omitted from the final result",
+      "consecutive null values in the middle of the array are omitted from the final result",
+      "6 level nest array with null values",
+      "all values in nested array are null"
+    ],
+    "totalCount": 11
+  },
+  "checkedAtUtc": "2026-11-20T08:59:25.403364+00:00",
+  "exercise": "flatten-array",
+  "learnerSolutionHashAfter": "e98e7880e45821e761a8b543161444218a310176a345de95d0587c3d30c24db6",
+  "learnerSolutionHashBefore": "e98e7880e45821e761a8b543161444218a310176a345de95d0587c3d30c24db6",
+  "outputsAgree": true,
+  "pesterVersion": "5.7.1",
+  "powerShellVersion": "7.7.0",
+  "refactor": "Replace pipeline implicit `$_` with explicit `foreach ($item in $Array)`; recursive output is emitted in input order.",
+  "referenceBaseline": "work/R09-T034/baseline/FlattenArray.example.ps1",
+  "status": "passed",
+  "task": "R09-T034"
+}

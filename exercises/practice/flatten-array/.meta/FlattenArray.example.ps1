@@ -18,11 +18,12 @@ Function Invoke-FlattenArray() {
         [System.Object[]]$Array
     )
 
-    $Array | ForEach-Object {
-        if ($_ -is [Array]) {
-            Invoke-FlattenArray $_
-        } elseif ($null -ne $_) {
-            $_
-        } 
+    foreach ($item in $Array) {
+        # Emit each item's leaves before moving on, preserving left-to-right order.
+        if ($item -is [Array]) {
+            Invoke-FlattenArray -Array $item
+        } elseif ($null -ne $item) {
+            $item
+        }
     }
 }

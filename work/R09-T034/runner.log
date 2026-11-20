@@ -1,0 +1,45 @@
+$ pwsh -NoProfile -NonInteractive -File before-pester.ps1
+Pester v5.7.1
+
+Starting discovery in 1 files.
+Discovery found 11 tests in 96ms.
+Running tests.
+
+Running tests from '/var/folders/h3/jm4rwdvd0kj_w654r9k_8_380000gn/T/flatten-array-R09-T034-h2e28puc/before/FlattenArray.tests.ps1'
+Describing flatten array test cases
+  [+] empty 55ms (40ms|15ms)
+  [+] no nesting 8ms (7ms|1ms)
+  [+] flattens a nested array 2ms (2ms|1ms)
+  [+] flattens array with just integers present 9ms (8ms|1ms)
+  [+] 5 level nesting 4ms (3ms|1ms)
+  [+] 6 level nesting 3ms (2ms|1ms)
+  [+] null values are omitted from the final result 2ms (1ms|1ms)
+  [+] consecutive null values at the front of the array are omitted from the final result 2ms (2ms|0ms)
+  [+] consecutive null values in the middle of the array are omitted from the final result 2ms (1ms|0ms)
+  [+] 6 level nest array with null values 3ms (2ms|0ms)
+  [+] all values in nested array are null 2ms (2ms|0ms)
+Tests completed in 354ms
+Tests Passed: 11, Failed: 0, Skipped: 0, Inconclusive: 0, NotRun: 0
+$ pwsh -NoProfile -NonInteractive -File after-pester.ps1
+Pester v5.7.1
+
+Starting discovery in 1 files.
+Discovery found 11 tests in 93ms.
+Running tests.
+
+Running tests from '/var/folders/h3/jm4rwdvd0kj_w654r9k_8_380000gn/T/flatten-array-R09-T034-h2e28puc/after/FlattenArray.tests.ps1'
+Describing flatten array test cases
+  [+] empty 52ms (38ms|14ms)
+  [+] no nesting 7ms (6ms|1ms)
+  [+] flattens a nested array 2ms (1ms|1ms)
+  [+] flattens array with just integers present 3ms (2ms|1ms)
+  [+] 5 level nesting 3ms (2ms|1ms)
+  [+] 6 level nesting 2ms (2ms|0ms)
+  [+] null values are omitted from the final result 2ms (1ms|0ms)
+  [+] consecutive null values at the front of the array are omitted from the final result 2ms (2ms|0ms)
+  [+] consecutive null values in the middle of the array are omitted from the final result 2ms (1ms|0ms)
+  [+] 6 level nest array with null values 5ms (2ms|3ms)
+  [+] all values in nested array are null 2ms (1ms|0ms)
+Tests completed in 327ms
+Tests Passed: 11, Failed: 0, Skipped: 0, Inconclusive: 0, NotRun: 0
+Before/after case outputs: [{"actual": [], "agree": true, "expected": [], "name": "empty"}, {"actual": [1, 2, 3], "agree": true, "expected": [1, 2, 3], "name": "no nesting"}, {"actual": [], "agree": true, "expected": [], "name": "flattens a nested array"}, {"actual": [1, 2, 3, 4, 5, 6, 7, 8], "agree": true, "expected": [1, 2, 3, 4, 5, 6, 7, 8], "name": "flattens array with just integers present"}, {"actual": [0, 2, 2, 3, 8, 100, 4, 50, -2], "agree": true, "expected": [0, 2, 2, 3, 8, 100, 4, 50, -2], "name": "5 level nesting"}, {"actual": [1, 2, 3, 4, 5, 6, 7, 8], "agree": true, "expected": [1, 2, 3, 4, 5, 6, 7, 8], "name": "6 level nesting"}, {"actual": [1, 2], "agree": true, "expected": [1, 2], "name": "null values are omitted from the final result"}, {"actual": [5], "agree": true, "expected": [5], "name": "consecutive null values at the front of the array are omitted from the final result"}, {"actual": [1, 4], "agree": true, "expected": [1, 4], "name": "consecutive null values in the middle of the array are omitted from the final result"}, {"actual": [0, 2, 2, 3, 8, 100, -2], "agree": true, "expected": [0, 2, 2, 3, 8, 100, -2], "name": "6 level nest array with null values"}, {"actual": [], "agree": true, "expected": [], "name": "all values in nested array are null"}]
