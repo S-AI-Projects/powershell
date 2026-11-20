@@ -1,0 +1,41 @@
+{
+  "alternative": {
+    "actual": "Hello, World!",
+    "exitCode": 0,
+    "expected": "Hello, World!",
+    "failedCount": 0,
+    "input": "no arguments",
+    "matchesExpected": true,
+    "passedCount": 1,
+    "skippedCount": 0,
+    "testNames": [
+      "Outputs: 'Hello, World!'"
+    ],
+    "totalCount": 1
+  },
+  "alternativeApproach": "Append the two greeting parts to a StringBuilder, then return its final string.",
+  "checkedAtUtc": "2026-11-20T09:08:36.451057+00:00",
+  "exercise": "hello-world",
+  "learnerSolutionHashAfter": "28b97e1378a16571016d923fb54ad0664d3778b16c41416d96d6f9347f8bf569",
+  "learnerSolutionHashBefore": "28b97e1378a16571016d923fb54ad0664d3778b16c41416d96d6f9347f8bf569",
+  "pesterVersion": "5.7.1",
+  "powerShellVersion": "7.7.0",
+  "reference": {
+    "actual": "Hello, World!",
+    "exitCode": 0,
+    "expected": "Hello, World!",
+    "failedCount": 0,
+    "input": "no arguments",
+    "matchesExpected": true,
+    "passedCount": 1,
+    "skippedCount": 0,
+    "testNames": [
+      "Outputs: 'Hello, World!'"
+    ],
+    "totalCount": 1
+  },
+  "referenceApproach": "Return the constant greeting string directly.",
+  "sameOutput": true,
+  "status": "passed",
+  "task": "R09-T036"
+}

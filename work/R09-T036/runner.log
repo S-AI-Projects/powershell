@@ -1,0 +1,25 @@
+$ pwsh -NoProfile -NonInteractive -File reference-runner.ps1
+Pester v5.7.1
+
+Starting discovery in 1 files.
+Discovery found 1 tests in 90ms.
+Running tests.
+
+Running tests from '/var/folders/h3/jm4rwdvd0kj_w654r9k_8_380000gn/T/hello-world-R09-T036-dlsk80tn/reference/HelloWorld.tests.ps1'
+Describing HelloWorldTest
+  [+] Outputs: 'Hello, World!' 55ms (41ms|14ms)
+Tests completed in 279ms
+Tests Passed: 1, Failed: 0, Skipped: 0, Inconclusive: 0, NotRun: 0
+$ pwsh -NoProfile -NonInteractive -File alternative-runner.ps1
+Pester v5.7.1
+
+Starting discovery in 1 files.
+Discovery found 1 tests in 88ms.
+Running tests.
+
+Running tests from '/var/folders/h3/jm4rwdvd0kj_w654r9k_8_380000gn/T/hello-world-R09-T036-dlsk80tn/alternative/HelloWorld.tests.ps1'
+Describing HelloWorldTest
+  [+] Outputs: 'Hello, World!' 60ms (46ms|14ms)
+Tests completed in 283ms
+Tests Passed: 1, Failed: 0, Skipped: 0, Inconclusive: 0, NotRun: 0
+Expected: 'Hello, World!'; reference actual: 'Hello, World!'; alternative actual: 'Hello, World!'
