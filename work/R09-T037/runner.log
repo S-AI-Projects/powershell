@@ -1,0 +1,38 @@
+$ pwsh -NoProfile -NonInteractive -File pester.ps1
+Pester v5.7.1
+
+Starting discovery in 1 files.
+Discovery found 24 tests in 101ms.
+Running tests.
+
+Running tests from '/var/folders/h3/jm4rwdvd0kj_w654r9k_8_380000gn/T/linked-list-R09-T037-lrgscy78/linked-list/LinkedList.tests.ps1'
+Describing LinkedList test cases
+ Context Valid operation
+   [+] pop gets element from the list 56ms (40ms|15ms)
+   [+] push/pop respectively add/remove at the end of the list 4ms (3ms|1ms)
+   [+] shift gets an element from the list 3ms (2ms|1ms)
+   [+] shift gets first element from the list 3ms (3ms|1ms)
+   [+] unshift adds element at start of the list 3ms (3ms|1ms)
+   [+] pop, push, shift, and unshift can be used in any order 21ms (21ms|1ms)
+   [+] count an empty list 2ms (2ms|1ms)
+   [+] count a list with items 2ms (1ms|1ms)
+   [+] count is correct after mutation 5ms (3ms|2ms)
+   [+] popping to empty doesn't break the list 3ms (2ms|1ms)
+   [+] shifting to empty doesn't break the list 5ms (4ms|1ms)
+   [+] deletes the only element 3ms (3ms|0ms)
+   [+] deletes the element with the specified value from the list 3ms (2ms|0ms)
+   [+] deletes the element with the specified value from the list, re-assigns tail 8ms (7ms|1ms)
+   [+] deletes the element with the specified value from the list, re-assigns head 4ms (4ms|1ms)
+   [+] deletes the first of two elements 5ms (4ms|1ms)
+   [+] deletes the second of two elements 3ms (3ms|1ms)
+   [+] delete does not modify the list if the element is not found 6ms (6ms|1ms)
+   [+] deletes only the first occurrence 4ms (3ms|0ms)
+ Context invalid operation
+   [+] pop empty list raise error 34ms (33ms|1ms)
+   [+] can return with pop and then raise error if empty 10ms (9ms|1ms)
+   [+] shift empty list raise error 2ms (2ms|0ms)
+   [+] can return with shift and then raise error if empty 3ms (3ms|0ms)
+   [+] delete empty list raise error 2ms (2ms|0ms)
+Tests completed in 463ms
+Tests Passed: 24, Failed: 0, Skipped: 0, Inconclusive: 0, NotRun: 0
+$ pwsh -NoProfile -NonInteractive -File micro-examples.ps1

@@ -1,0 +1,67 @@
+{
+  "checkedAtUtc": "2026-11-20T09:14:49.479582+00:00",
+  "exercise": "linked-list",
+  "learnerSolutionHashAfter": "e7f1d8369baac11e2455c59a0eaef9c20a516d826c3465547ce591d01d08b490",
+  "learnerSolutionHashBefore": "e7f1d8369baac11e2455c59a0eaef9c20a516d826c3465547ce591d01d08b490",
+  "pester": {
+    "exitCode": 0,
+    "failedCount": 0,
+    "passedCount": 24,
+    "skippedCount": 0,
+    "testNames": [
+      "pop gets element from the list",
+      "push/pop respectively add/remove at the end of the list",
+      "shift gets an element from the list",
+      "shift gets first element from the list",
+      "unshift adds element at start of the list",
+      "pop, push, shift, and unshift can be used in any order",
+      "count an empty list",
+      "count a list with items",
+      "count is correct after mutation",
+      "popping to empty doesn't break the list",
+      "shifting to empty doesn't break the list",
+      "deletes the only element",
+      "deletes the element with the specified value from the list",
+      "deletes the element with the specified value from the list, re-assigns tail",
+      "deletes the element with the specified value from the list, re-assigns head",
+      "deletes the first of two elements",
+      "deletes the second of two elements",
+      "delete does not modify the list if the element is not found",
+      "deletes only the first occurrence",
+      "pop empty list raise error",
+      "can return with pop and then raise error if empty",
+      "shift empty list raise error",
+      "can return with shift and then raise error if empty",
+      "delete empty list raise error"
+    ],
+    "totalCount": 24
+  },
+  "pesterVersion": "5.7.1",
+  "pipelineContrast": {
+    "actualPipelineRecords": [
+      7,
+      8
+    ],
+    "expectedPipelineRecords": [
+      7,
+      8
+    ],
+    "input": "Push([object[]]@(7, 8)), then Pop() | ForEach-Object {  }",
+    "passed": true,
+    "poppedArrayCount": 2
+  },
+  "powerShellVersion": "7.7.0",
+  "scalarExample": {
+    "actual": "7|Int32|1",
+    "arrayCaptureCount": 1,
+    "expected": "7|Int32|1",
+    "input": "Push(7), then Pop()",
+    "passed": true,
+    "typeName": "Int32",
+    "value": 7
+  },
+  "selectedConstruct": "Explicit return of the removed value in LinkedList.Pop() and LinkedList.Shift().",
+  "status": "passed",
+  "task": "R09-T037",
+  "testCountDeclared": 24
+}
