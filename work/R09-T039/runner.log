@@ -1,0 +1,106 @@
+=== reference helper output ===
+=== reference Pester log ===
+Pester v5.7.1
+
+Starting discovery in 1 files.
+Discovery found 24 tests in 124ms.
+Running tests.
+
+Running tests from '/var/folders/h3/jm4rwdvd0kj_w654r9k_8_380000gn/T/list-ops-course-check-elg6n2zp/list-ops/ListOps.tests.ps1'
+Describing ListOps test cases
+ Context append method
+   [+] empty lists 54ms (38ms|16ms)
+   [+] list to empty list 7ms (7ms|1ms)
+   [+] empty list to list 2ms (2ms|1ms)
+   [+] non-empty lists 2ms (2ms|1ms)
+ Context concatenate method
+   [+] empty list 3ms (2ms|1ms)
+   [+] list of lists 3ms (2ms|1ms)
+   [+] list of nested lists 5ms (4ms|0ms)
+ Context filter method
+   [+] empty list 3ms (2ms|1ms)
+   [+] non-empty list 3ms (2ms|0ms)
+ Context length method
+   [+] empty list 3ms (2ms|1ms)
+   [+] non-empty list 2ms (1ms|0ms)
+ Context map method
+   [+] empty list 7ms (2ms|5ms)
+   [+] non-empty list 3ms (2ms|1ms)
+ Context fold left method
+   [+] empty list 3ms (2ms|1ms)
+   [+] direction independent function applied to non-empty list 3ms (2ms|1ms)
+   [+] direction dependent function applied to non-empty list 6ms (5ms|0ms)
+ Context fold right method
+   [+] empty list 3ms (2ms|1ms)
+   [+] direction independent function applied to non-empty list 2ms (2ms|0ms)
+   [+] direction dependent function applied to non-empty list 2ms (2ms|1ms)
+   [+] add string 4ms (3ms|0ms)
+ Context reverse method
+   [+] empty list 10ms (9ms|1ms)
+   [+] non-empty list 7ms (7ms|1ms)
+   [+] list of lists is not flattened 7ms (3ms|3ms)
+   [+] reverse mixed types 4ms (3ms|0ms)
+Tests completed in 444ms
+Tests Passed: 24, Failed: 0, Skipped: 0, Inconclusive: 0, NotRun: 0
+=== failing-reference helper output ===
+=== failing-reference Pester log ===
+Pester v5.7.1
+
+Starting discovery in 1 files.
+Discovery found 24 tests in 123ms.
+Running tests.
+
+Running tests from '/var/folders/h3/jm4rwdvd0kj_w654r9k_8_380000gn/T/list-ops-course-check-l9qni30b/list-ops/ListOps.tests.ps1'
+Describing ListOps test cases
+ Context append method
+   [+] empty lists 54ms (38ms|16ms)
+   [-] list to empty list 26ms (25ms|1ms)
+    Expected exactly $null, but got @(1, 2, 3, 4).
+    at $got | Should -BeExactly $want, /var/folders/h3/jm4rwdvd0kj_w654r9k_8_380000gn/T/list-ops-course-check-l9qni30b/list-ops/ListOps.tests.ps1:18
+    at <ScriptBlock>, /var/folders/h3/jm4rwdvd0kj_w654r9k_8_380000gn/T/list-ops-course-check-l9qni30b/list-ops/ListOps.tests.ps1:18
+   [-] empty list to list 4ms (4ms|1ms)
+    Expected exactly $null, but got @(1, 2, 3, 4).
+    at $got | Should -BeExactly $want, /var/folders/h3/jm4rwdvd0kj_w654r9k_8_380000gn/T/list-ops-course-check-l9qni30b/list-ops/ListOps.tests.ps1:25
+    at <ScriptBlock>, /var/folders/h3/jm4rwdvd0kj_w654r9k_8_380000gn/T/list-ops-course-check-l9qni30b/list-ops/ListOps.tests.ps1:25
+   [-] non-empty lists 5ms (4ms|1ms)
+    Expected exactly $null, but got @(1, 2, 2, 3, 4, 5).
+    at $got | Should -BeExactly $want, /var/folders/h3/jm4rwdvd0kj_w654r9k_8_380000gn/T/list-ops-course-check-l9qni30b/list-ops/ListOps.tests.ps1:32
+    at <ScriptBlock>, /var/folders/h3/jm4rwdvd0kj_w654r9k_8_380000gn/T/list-ops-course-check-l9qni30b/list-ops/ListOps.tests.ps1:32
+ Context concatenate method
+   [+] empty list 3ms (2ms|1ms)
+   [+] list of lists 5ms (5ms|1ms)
+   [+] list of nested lists 4ms (4ms|0ms)
+ Context filter method
+   [+] empty list 2ms (2ms|1ms)
+   [+] non-empty list 3ms (2ms|1ms)
+ Context length method
+   [+] empty list 3ms (2ms|1ms)
+   [+] non-empty list 2ms (1ms|0ms)
+ Context map method
+   [+] empty list 5ms (5ms|1ms)
+   [+] non-empty list 6ms (6ms|1ms)
+ Context fold left method
+   [+] empty list 3ms (2ms|1ms)
+   [+] direction independent function applied to non-empty list 3ms (2ms|1ms)
+   [+] direction dependent function applied to non-empty list 5ms (4ms|0ms)
+ Context fold right method
+   [+] empty list 3ms (2ms|1ms)
+   [+] direction independent function applied to non-empty list 2ms (2ms|0ms)
+   [+] direction dependent function applied to non-empty list 2ms (1ms|0ms)
+   [+] add string 4ms (3ms|0ms)
+ Context reverse method
+   [+] empty list 8ms (8ms|1ms)
+   [+] non-empty list 4ms (3ms|0ms)
+   [+] list of lists is not flattened 3ms (2ms|0ms)
+   [+] reverse mixed types 3ms (3ms|0ms)
+Tests completed in 505ms
+Tests Passed: 21, Failed: 3, Skipped: 0, Inconclusive: 0, NotRun: 0
+=== empty-selection helper output ===
+=== empty-selection Pester log ===
+Pester v5.7.1
+
+Starting discovery in 1 files.
+Discovery found 0 tests in 30ms.
+Running tests.
+Tests completed in 23ms
+Tests Passed: 0, Failed: 0, Skipped: 0, Inconclusive: 0, NotRun: 0

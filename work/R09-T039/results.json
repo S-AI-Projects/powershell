@@ -1,0 +1,197 @@
+{
+  "checkedAtUtc": "2026-11-20T09:28:56.319538+00:00",
+  "declaredTestCount": 24,
+  "exercise": "list-ops",
+  "learnerSolutionHashAfterAllRuns": "7ac92f7feea947ff92eeab751223ac795a9aca85632eea1846424f0872479583",
+  "learnerSolutionHashBeforeAllRuns": "7ac92f7feea947ff92eeab751223ac795a9aca85632eea1846424f0872479583",
+  "overallLearnerFileUnchanged": true,
+  "scenarios": {
+    "empty-selection": {
+      "checkedAtUtc": "2026-11-20T09:29:00.370868+00:00",
+      "error": "Pester child exited with code 2",
+      "exercise": "list-ops",
+      "helperExitCode": 1,
+      "learnerSolutionHashAfter": "7ac92f7feea947ff92eeab751223ac795a9aca85632eea1846424f0872479583",
+      "learnerSolutionHashBefore": "7ac92f7feea947ff92eeab751223ac795a9aca85632eea1846424f0872479583",
+      "mode": "empty-selection",
+      "pester": {
+        "failedCount": 0,
+        "passedCount": 0,
+        "probes": [
+          {
+            "actual": [],
+            "expected": [],
+            "input": "List1=@(), List2=@()",
+            "matchesExpected": true,
+            "name": "empty lists"
+          },
+          {
+            "actual": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "expected": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "input": "List1=@(), List2=@(1, 2, 3, 4)",
+            "matchesExpected": true,
+            "name": "list to empty list"
+          }
+        ],
+        "skippedCount": 0,
+        "testNames": [],
+        "totalCount": 0
+      },
+      "pesterChildExitCode": 2,
+      "pesterVersion": "5.7.1",
+      "powerShellVersion": "7.7.0",
+      "status": "failed",
+      "temporaryDirectoryCleaned": true
+    },
+    "failing-reference": {
+      "checkedAtUtc": "2026-11-20T09:28:58.353927+00:00",
+      "error": "Pester child exited with code 1",
+      "exercise": "list-ops",
+      "helperExitCode": 1,
+      "learnerSolutionHashAfter": "7ac92f7feea947ff92eeab751223ac795a9aca85632eea1846424f0872479583",
+      "learnerSolutionHashBefore": "7ac92f7feea947ff92eeab751223ac795a9aca85632eea1846424f0872479583",
+      "mode": "failing-reference",
+      "pester": {
+        "failedCount": 3,
+        "passedCount": 21,
+        "probes": [
+          {
+            "actual": [],
+            "expected": [],
+            "input": "List1=@(), List2=@()",
+            "matchesExpected": true,
+            "name": "empty lists"
+          },
+          {
+            "actual": [],
+            "expected": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "input": "List1=@(), List2=@(1, 2, 3, 4)",
+            "matchesExpected": false,
+            "name": "list to empty list"
+          }
+        ],
+        "skippedCount": 0,
+        "testNames": [
+          "empty lists",
+          "list to empty list",
+          "empty list to list",
+          "non-empty lists",
+          "empty list",
+          "list of lists",
+          "list of nested lists",
+          "empty list",
+          "non-empty list",
+          "empty list",
+          "non-empty list",
+          "empty list",
+          "non-empty list",
+          "empty list",
+          "direction independent function applied to non-empty list",
+          "direction dependent function applied to non-empty list",
+          "empty list",
+          "direction independent function applied to non-empty list",
+          "direction dependent function applied to non-empty list",
+          "add string",
+          "empty list",
+          "non-empty list",
+          "list of lists is not flattened",
+          "reverse mixed types"
+        ],
+        "totalCount": 24
+      },
+      "pesterChildExitCode": 1,
+      "pesterVersion": "5.7.1",
+      "powerShellVersion": "7.7.0",
+      "status": "failed",
+      "temporaryDirectoryCleaned": true
+    },
+    "reference": {
+      "checkedAtUtc": "2026-11-20T09:28:56.377187+00:00",
+      "exercise": "list-ops",
+      "helperExitCode": 0,
+      "learnerSolutionHashAfter": "7ac92f7feea947ff92eeab751223ac795a9aca85632eea1846424f0872479583",
+      "learnerSolutionHashBefore": "7ac92f7feea947ff92eeab751223ac795a9aca85632eea1846424f0872479583",
+      "mode": "reference",
+      "pester": {
+        "failedCount": 0,
+        "passedCount": 24,
+        "probes": [
+          {
+            "actual": [],
+            "expected": [],
+            "input": "List1=@(), List2=@()",
+            "matchesExpected": true,
+            "name": "empty lists"
+          },
+          {
+            "actual": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "expected": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "input": "List1=@(), List2=@(1, 2, 3, 4)",
+            "matchesExpected": true,
+            "name": "list to empty list"
+          }
+        ],
+        "skippedCount": 0,
+        "testNames": [
+          "empty lists",
+          "list to empty list",
+          "empty list to list",
+          "non-empty lists",
+          "empty list",
+          "list of lists",
+          "list of nested lists",
+          "empty list",
+          "non-empty list",
+          "empty list",
+          "non-empty list",
+          "empty list",
+          "non-empty list",
+          "empty list",
+          "direction independent function applied to non-empty list",
+          "direction dependent function applied to non-empty list",
+          "empty list",
+          "direction independent function applied to non-empty list",
+          "direction dependent function applied to non-empty list",
+          "add string",
+          "empty list",
+          "non-empty list",
+          "list of lists is not flattened",
+          "reverse mixed types"
+        ],
+        "totalCount": 24
+      },
+      "pesterChildExitCode": 0,
+      "pesterVersion": "5.7.1",
+      "powerShellVersion": "7.7.0",
+      "status": "passed",
+      "temporaryDirectoryCleaned": true
+    }
+  },
+  "status": "passed",
+  "task": "R09-T039"
+}
