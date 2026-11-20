@@ -1,0 +1,61 @@
+{
+  "checkedAtUtc": "2026-11-20T08:46:37.344626+00:00",
+  "exercise": "minesweeper",
+  "generationEvidence": "work/R09-T032/generation.json",
+  "learnerSolutionHashAfter": "4928a08abeebe2034cc6c573841ce44e2e9191580c8be89009242d71f61fff7c",
+  "learnerSolutionHashBefore": "4928a08abeebe2034cc6c573841ce44e2e9191580c8be89009242d71f61fff7c",
+  "pester": {
+    "failedCount": 0,
+    "passedCount": 14,
+    "selectedCaseProbes": {
+      "noColumns": {
+        "actual": [
+          ""
+        ],
+        "actualCount": 1,
+        "expected": "[\"\"]",
+        "input": "@(\"\")",
+        "passed": true
+      },
+      "noRows": {
+        "actual": [],
+        "actualCount": 0,
+        "expected": "empty result",
+        "input": "@()",
+        "passed": true
+      }
+    },
+    "skippedCount": 0,
+    "testNames": [
+      "no rows",
+      "no columns",
+      "no mines",
+      "minefield with only mines",
+      "mine surrounded by spaces",
+      "space surrounded by mines",
+      "horizontal line",
+      "horizontal line, mines at edges",
+      "vertical line",
+      "vertical line, mines at edges",
+      "cross",
+      "large minefield",
+      "annotate 9",
+      "Invalid character in minefield"
+    ],
+    "totalCount": 14
+  },
+  "pesterVersion": "5.7.1",
+  "powerShellVersion": "7.7.0",
+  "selectedCases": {
+    "no columns": {
+      "expected": "[\"\"] (one row containing an empty string)",
+      "input": "@(\"\")"
+    },
+    "no rows": {
+      "expected": "null or empty result",
+      "input": "@()"
+    }
+  },
+  "status": "passed",
+  "task": "R09-T032"
+}

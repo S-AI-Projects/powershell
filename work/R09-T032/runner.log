@@ -1,0 +1,27 @@
+$ python3 tools/course_checks/r09-t032.py
+PASS: configlet 4.0.3; two fresh syncs preserved 14 Pester cases and all 12 metadata cases.
+$ pwsh -NoProfile -NonInteractive -File invoke-pester.ps1
+Pester v5.7.1
+
+Starting discovery in 1 files.
+Discovery found 14 tests in 93ms.
+Running tests.
+
+Running tests from '/var/folders/h3/jm4rwdvd0kj_w654r9k_8_380000gn/T/minesweeper-R09-T032-tests-qzxnb9n_/minesweeper/Minesweeper.tests.ps1'
+Describing Minesweeper test cases
+  [+] no rows 74ms (60ms|14ms)
+  [+] no columns 14ms (14ms|1ms)
+  [+] no mines 15ms (14ms|1ms)
+  [+] minefield with only mines 2ms (2ms|1ms)
+  [+] mine surrounded by spaces 4ms (4ms|1ms)
+  [+] space surrounded by mines 2ms (2ms|1ms)
+  [+] horizontal line 2ms (1ms|1ms)
+  [+] horizontal line, mines at edges 2ms (1ms|0ms)
+  [+] vertical line 3ms (2ms|1ms)
+  [+] vertical line, mines at edges 2ms (2ms|0ms)
+  [+] cross 3ms (2ms|0ms)
+  [+] large minefield 3ms (3ms|0ms)
+  [+] annotate 9 3ms (3ms|1ms)
+  [+] Invalid character in minefield 20ms (20ms|1ms)
+Tests completed in 392ms
+Tests Passed: 14, Failed: 0, Skipped: 0, Inconclusive: 0, NotRun: 0

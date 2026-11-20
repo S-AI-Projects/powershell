@@ -1,0 +1,47 @@
+{
+  "caseCatalogUnchanged": true,
+  "caseCountAfter": 12,
+  "caseCountBefore": 12,
+  "configletVersion": "4.0.3",
+  "exercise": "exercises/practice/minesweeper",
+  "exerciseTemplates": [],
+  "pesterCaseCount": 14,
+  "pesterSuite": "Minesweeper test cases",
+  "runs": [
+    {
+      "command": "configlet --track-dir <temporary-track-copy> sync --tests include --update --yes",
+      "exitCode": 0,
+      "stderr": "Cloning https://github.com/exercism/problem-specifications... success\n",
+      "stdout": "Checking exercises...\n[info] dot-dsl: included 19 missing test cases\n[info] list-ops: included 1 missing test case\n[info] pig-latin: included 2 missing test cases\n[info] satellite: included 3 missing test cases\n[info] simple-linked-list: included 29 missing test cases\nEvery exercise has up-to-date tests!\n"
+    },
+    {
+      "command": "configlet --track-dir <temporary-track-copy> sync --tests include --update --yes --offline",
+      "exitCode": 0,
+      "stderr": "",
+      "stdout": "Checking exercises...\n[info] dot-dsl: included 19 missing test cases\n[info] list-ops: included 1 missing test case\n[info] pig-latin: included 2 missing test cases\n[info] satellite: included 3 missing test cases\n[info] simple-linked-list: included 29 missing test cases\nEvery exercise has up-to-date tests!\n"
+    }
+  ],
+  "selectedCases": {
+    "0c5ec4bd-dea7-4138-8651-1203e1cb9f44": {
+      "description": "no rows",
+      "expected": "null or empty result",
+      "input": "@()"
+    },
+    "650ac4c0-ad6b-4b41-acde-e4ea5852c3b8": {
+      "description": "no columns",
+      "expected": "[\"\"] (one row containing an empty string)",
+      "input": "@(\"\")"
+    }
+  },
+  "status": "passed",
+  "testFileHashes": [
+    "a57ddc59ba97282b405480afae666ae318269eb0003499979d83e01502fa0bbe",
+    "a57ddc59ba97282b405480afae666ae318269eb0003499979d83e01502fa0bbe"
+  ],
+  "testFileUnchanged": true,
+  "testsTomlHashesAfter": [
+    "37369908f28a9bb052bafb2fd7a9bc09542d57218ef7d2efe4eebbf94560e3cb",
+    "37369908f28a9bb052bafb2fd7a9bc09542d57218ef7d2efe4eebbf94560e3cb"
+  ],
+  "timestampNormalization": "none; the maintained Pester source has no generated timestamp"
+}
