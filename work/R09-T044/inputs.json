@@ -1,0 +1,30 @@
+{
+  "exercise": "zipper",
+  "resolved_paths": {
+    "solution": "Zipper.ps1",
+    "test": "Zipper.tests.ps1",
+    "example": ".meta/Zipper.example.ps1"
+  },
+  "anchored_cases": [
+    "Zipper test cases",
+    "data is retained",
+    "left, right and value"
+  ],
+  "local_state_trace": {
+    "focus_node_value": "$tree.Value (integer data at focus cursor)",
+    "focus_node_left": "$tree.Left (left subtree pointer)",
+    "focus_node_right": "$tree.Right (right subtree pointer)",
+    "ancestor_breadcrumb_path": "[Path[]]@() (empty array representing 0 ancestors above root)"
+  },
+  "readability_improvement": {
+    "target_method": "static [Zipper] FromTree([Tree] $tree)",
+    "description": "Replaced bare untyped `@()` with null guard and explicitly typed `$emptyAncestorPath = [Path[]]@()`, naming local focus properties ($focusValue, $focusLeft, $focusRight).",
+    "invariants_preserved": [
+      "Return type [Zipper]",
+      "Parameter ordering in constructor",
+      "Null-safety error behavior",
+      "Zero new dependencies",
+      "Preserved public API"
+    ]
+  }
+}
