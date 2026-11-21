@@ -1,0 +1,68 @@
+[
+  {
+    "name": "empty",
+    "input": []
+  },
+  {
+    "name": "win",
+    "input": [
+      "Allegoric Alaskans;Blithering Badgers;win"
+    ]
+  },
+  {
+    "name": "loss",
+    "input": [
+      "Blithering Badgers;Allegoric Alaskans;loss"
+    ]
+  },
+  {
+    "name": "draw",
+    "input": [
+      "Allegoric Alaskans;Blithering Badgers;draw"
+    ]
+  },
+  {
+    "name": "typical",
+    "input": [
+      "Allegoric Alaskans;Blithering Badgers;win",
+      "Devastating Donkeys;Courageous Californians;draw",
+      "Devastating Donkeys;Allegoric Alaskans;win",
+      "Courageous Californians;Blithering Badgers;loss",
+      "Blithering Badgers;Devastating Donkeys;loss",
+      "Allegoric Alaskans;Courageous Californians;win"
+    ]
+  },
+  {
+    "name": "ties",
+    "input": [
+      "Courageous Californians;Devastating Donkeys;win",
+      "Allegoric Alaskans;Blithering Badgers;win",
+      "Devastating Donkeys;Allegoric Alaskans;loss",
+      "Courageous Californians;Blithering Badgers;win",
+      "Blithering Badgers;Devastating Donkeys;draw",
+      "Allegoric Alaskans;Courageous Californians;draw"
+    ]
+  },
+  {
+    "name": "numeric sort",
+    "input": [
+      "Team A;Team B;win",
+      "Team A;Team B;win",
+      "Team A;Team B;win",
+      "Team A;Team B;win",
+      "Team C;Team D;draw",
+      "Team C;Team D;draw",
+      "Team C;Team D;draw",
+      "Team C;Team D;draw",
+      "Team C;Team D;draw",
+      "Team C;Team D;draw",
+      "Team C;Team D;draw",
+      "Team C;Team D;draw",
+      "Team C;Team D;draw",
+      "Team C;Team D;draw",
+      "Team E;Team F;win",
+      "Team E;Team F;win",
+      "Team E;Team F;win"
+    ]
+  }
+]

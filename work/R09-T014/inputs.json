@@ -1,0 +1,20 @@
+{
+  "config_files": {
+    "solution": [
+      "Tournament.ps1"
+    ],
+    "test": [
+      "Tournament.tests.ps1"
+    ],
+    "example": [
+      ".meta/Tournament.example.ps1"
+    ]
+  },
+  "baseline_ref": "main",
+  "case_inputs_file": "cases.json",
+  "named_cases": [
+    "just the header if no input",
+    "a win is three points, a loss is zero points"
+  ],
+  "pester_command": "Invoke-Pester -PassThru"
+}

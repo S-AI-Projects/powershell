@@ -1,0 +1,85 @@
+{
+  "executed_cases": 12,
+  "tool_versions": {
+    "pester": "6.2.0",
+    "powershell": "7.7.0"
+  },
+  "expected_vs_actual": [
+    {
+      "test": "just the header if no input",
+      "before": "Passed",
+      "after": "Passed"
+    },
+    {
+      "test": "a win is three points, a loss is zero points",
+      "before": "Passed",
+      "after": "Passed"
+    },
+    {
+      "test": "a win can also be expressed as a loss",
+      "before": "Passed",
+      "after": "Passed"
+    },
+    {
+      "test": "a different team can win",
+      "before": "Passed",
+      "after": "Passed"
+    },
+    {
+      "test": "a draw is one point each",
+      "before": "Passed",
+      "after": "Passed"
+    },
+    {
+      "test": "There can be more than one match",
+      "before": "Passed",
+      "after": "Passed"
+    },
+    {
+      "test": "There can be more than one winner",
+      "before": "Passed",
+      "after": "Passed"
+    },
+    {
+      "test": "There can be more than two teams",
+      "before": "Passed",
+      "after": "Passed"
+    },
+    {
+      "test": "typical input",
+      "before": "Passed",
+      "after": "Passed"
+    },
+    {
+      "test": "incomplete competition (not all pairs have played)",
+      "before": "Passed",
+      "after": "Passed"
+    },
+    {
+      "test": "ties broken alphabetically",
+      "before": "Passed",
+      "after": "Passed"
+    },
+    {
+      "test": "ensure points sorted numerically",
+      "before": "Passed",
+      "after": "Passed"
+    }
+  ],
+  "direct_outputs_identical": 7,
+  "outputs_after": {
+    "empty": "Team                           | MP |  W |  D |  L |  P",
+    "win": "Team                           | MP |  W |  D |  L |  P\nAllegoric Alaskans             |  1 |  1 |  0 |  0 |  3\nBlithering Badgers             |  1 |  0 |  0 |  1 |  0",
+    "loss": "Team                           | MP |  W |  D |  L |  P\nAllegoric Alaskans             |  1 |  1 |  0 |  0 |  3\nBlithering Badgers             |  1 |  0 |  0 |  1 |  0",
+    "draw": "Team                           | MP |  W |  D |  L |  P\nAllegoric Alaskans             |  1 |  0 |  1 |  0 |  1\nBlithering Badgers             |  1 |  0 |  1 |  0 |  1",
+    "typical": "Team                           | MP |  W |  D |  L |  P\nDevastating Donkeys            |  3 |  2 |  1 |  0 |  7\nAllegoric Alaskans             |  3 |  2 |  0 |  1 |  6\nBlithering Badgers             |  3 |  1 |  0 |  2 |  3\nCourageous Californians        |  3 |  0 |  1 |  2 |  1",
+    "ties": "Team                           | MP |  W |  D |  L |  P\nAllegoric Alaskans             |  3 |  2 |  1 |  0 |  7\nCourageous Californians        |  3 |  2 |  1 |  0 |  7\nBlithering Badgers             |  3 |  0 |  1 |  2 |  1\nDevastating Donkeys            |  3 |  0 |  1 |  2 |  1",
+    "numeric sort": "Team                           | MP |  W |  D |  L |  P\nTeam A                         |  4 |  4 |  0 |  0 | 12\nTeam C                         | 10 |  0 | 10 |  0 | 10\nTeam D                         | 10 |  0 | 10 |  0 | 10\nTeam E                         |  3 |  3 |  0 |  0 |  9\nTeam B                         |  4 |  0 |  0 |  4 |  0\nTeam F                         |  3 |  0 |  0 |  3 |  0"
+  },
+  "learner_stub": {
+    "Result": "Failed",
+    "Total": 12,
+    "Passed": 0,
+    "Failed": 12
+  }
+}
