@@ -33,6 +33,10 @@ Function Invoke-Tournament {
 }
 
 Function LineProcessing($Table, $Line) { 
+    # Each team's tally is [MP, W, D, L, P], in the same order as the output columns.
+    # Invariants: MP = W + D + L, and P = 3 * W + D.
+    $played, $wins, $draws, $losses, $points = 0..4
+
     $winner, $loser, $result = $Line -split ';'
 
     if ($result -eq 'loss') {
@@ -47,19 +51,19 @@ Function LineProcessing($Table, $Line) {
 
     switch ($result) {
         'draw'  {
-            $Table[$winner][0]++
-            $Table[$winner][2]++
-            $Table[$winner][-1]++
-            $Table[$loser][0]++
-            $Table[$loser][2]++
-            $Table[$loser][-1]++
+            $Table[$winner][$played]++
+            $Table[$winner][$draws]++
+            $Table[$winner][$points]++
+            $Table[$loser][$played]++
+            $Table[$loser][$draws]++
+            $Table[$loser][$points]++
         }
         Default {
-            $Table[$winner][0]++
-            $Table[$winner][1]++
-            $Table[$winner][-1] += 3
-            $Table[$loser][0]++
-            $Table[$loser][3]++
+            $Table[$winner][$played]++
+            $Table[$winner][$wins]++
+            $Table[$winner][$points] += 3
+            $Table[$loser][$played]++
+            $Table[$loser][$losses]++
         }
     }
 }
