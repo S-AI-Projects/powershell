@@ -1,0 +1,59 @@
+{
+  "task_id": "R09-T041",
+  "github_issue": 5,
+  "exercise": "crypto-square",
+  "tool_versions": {
+    "python": "Python 3.15.2",
+    "pwsh": "PowerShell 7.7.0",
+    "pester": "6.2.0"
+  },
+  "config_paths": {
+    "solution": "CryptoSquare.ps1",
+    "test": "CryptoSquare.tests.ps1",
+    "example": ".meta/CryptoSquare.example.ps1"
+  },
+  "canonical_cases": {
+    "target_uuid": "fbcb0c6d-4c39-4a31-83f6-c473baa6af80",
+    "target_description": "54 character plaintext results in 7 chunks, the last two with trailing spaces",
+    "target_include": false,
+    "target_comment": "Deprecated canonical test case expecting 7 chunks. Reimplemented and superseded by 33fd914e-fa44-445b-8f38-ff8fbc9fe6e6 ('54 character plaintext results in 8 chunks, the last two with trailing spaces'), which is actively tested in CryptoSquare.tests.ps1 where Invoke-CryptoSquare outputs 8 chunks of length 7.",
+    "replacement_uuid": "33fd914e-fa44-445b-8f38-ff8fbc9fe6e6",
+    "replacement_description": "54 character plaintext results in 8 chunks, the last two with trailing spaces",
+    "replacement_reimplements": "fbcb0c6d-4c39-4a31-83f6-c473baa6af80"
+  },
+  "include_counts": {
+    "before": {
+      "total_cases": 9,
+      "explicit_include_true": 0,
+      "explicit_include_false": 1,
+      "effective_included": 8,
+      "effective_excluded": 1
+    },
+    "after": {
+      "total_cases": 9,
+      "explicit_include_true": 0,
+      "explicit_include_false": 1,
+      "effective_included": 8,
+      "effective_excluded": 1
+    }
+  },
+  "pester_execution": {
+    "command": "pwsh -NoProfile -Command \"$res = Invoke-Pester -PassThru; if (-not $res -or $res.TotalCount -eq 0 -or $res.FailedCount -gt 0) { exit 1 }\"",
+    "returncode": 0,
+    "total_count": 8,
+    "passed_count": 8,
+    "failed_count": 0,
+    "skipped_count": 0,
+    "raw_output": "\u001b[95m\n\u001b[95mRunning tests from 1 files.\u001b[0m\n\u001b[32m[+] /private/var/folders/hj/41wjd4m12cg34vqsk2p_dxww0000gn/T/tmpmltq473t/crypto-square/CryptoSquare.tests.ps1\u001b[0m\u001b[90m 172ms\u001b[0m\u001b[90m (8 tests)\u001b[0m\n\u001b[97mTests completed in 175ms\u001b[0m\n\u001b[32mTests Passed: 8, \u001b[0m\u001b[90mFailed: 0, \u001b[0m\u001b[90mSkipped: 0, \u001b[0m\u001b[90mInconclusive: 0, \u001b[0m\u001b[90mNotRun: 0\u001b[0m"
+  },
+  "assertions": {
+    "tests_toml_tomllib_parse": "PASSED",
+    "target_uuid_exists": "PASSED",
+    "target_uuid_include_false": "PASSED",
+    "rationale_comment_present": "PASSED",
+    "pester_execution_success": "PASSED",
+    "pester_total_count_gt_zero": "PASSED",
+    "pester_failed_count_eq_zero": "PASSED",
+    "learner_stub_unmodified": "PASSED"
+  }
+}
