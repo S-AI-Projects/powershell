@@ -1,0 +1,23 @@
+{
+  "config_files": {
+    "solution": [
+      "LeapYear.ps1"
+    ],
+    "test": [
+      "LeapYear.tests.ps1"
+    ],
+    "example": [
+      ".meta/LeapYear.example.ps1"
+    ]
+  },
+  "mutation": {
+    "old": "$year % 4 -eq 0",
+    "new": "$year % 2 -eq 0"
+  },
+  "rejecting_test": {
+    "uuid": "ac227e82-ee82-4a09-9eb6-4f84331ffdb0",
+    "name": "year divisible by 2, not divisible by 4 in common year"
+  },
+  "years_compared": "1..2400",
+  "pester_command": "Invoke-Pester -PassThru"
+}
