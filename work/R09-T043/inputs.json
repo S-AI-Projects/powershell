@@ -1,0 +1,36 @@
+{
+  "exercise": "error-handling",
+  "resolved_paths": {
+    "solution": "ErrorHandling.ps1",
+    "test": "ErrorHandling.tests.ps1",
+    "example": ".meta/ErrorHandling.example.ps1"
+  },
+  "anchored_cases": [
+    "ErrorHandling test cases",
+    "non terminal error",
+    "ValueErrorHandling : valid input"
+  ],
+  "deliberate_mutant": {
+    "target_function": "ValueErrorHandling",
+    "mutation_type": "argument calculation off-by-one",
+    "original_statement": "ValidateAge -Age $Age",
+    "mutated_statement": "ValidateAge -Age ($Age + 1)",
+    "rejected_by_test": "ValueErrorHandling : valid input"
+  },
+  "minimal_input": {
+    "parameter": "Age",
+    "tested_input": 25,
+    "minimal_valid_input": 18,
+    "specification_constraint": "ValidateScript({$_ -ge 18}) on [int] $Age",
+    "reason": "18 is the smallest integer satisfying the >= 18 age contract"
+  },
+  "boundary_gap_mutant": {
+    "description": "if ($Age -gt 18) off-by-one boundary check",
+    "missed_by_existing_suite": true,
+    "proposed_test_case": {
+      "name": "ValueErrorHandling : valid boundary input (18)",
+      "input": "ValueErrorHandling -Age 18",
+      "expected": "I'm 18 years old!"
+    }
+  }
+}
