@@ -1,0 +1,21 @@
+{
+  "exercise_directory": "/Users/ktom3006/Projects/powershell/exercises/practice/prime-factors",
+  "resolved_paths": {
+    "solution": "exercises/practice/prime-factors/PrimeFactors.ps1",
+    "test": "exercises/practice/prime-factors/PrimeFactors.tests.ps1",
+    "example": "exercises/practice/prime-factors/.meta/PrimeFactors.example.ps1"
+  },
+  "anchored_cases": [
+    "Test Invoke-PrimeFactors.ps1",
+    "no factors",
+    "prime number"
+  ],
+  "pre_run_learner_file_hashes": {
+    "PrimeFactors.ps1": "a0994c21644d06d3f293da94fd61baff0abaeae9216000bc986b4ff6ef337d49"
+  },
+  "modes_configured": [
+    "mode_1_reference",
+    "mode_2_failing_reference",
+    "mode_3_empty_selection"
+  ]
+}
