@@ -1,0 +1,87 @@
+{
+  "anchored_describe_block": {
+    "expected": "Zipper test cases",
+    "actual": "Zipper test cases",
+    "matched": true
+  },
+  "original_execution": {
+    "total_count": {
+      "expected": 14,
+      "actual": 14,
+      "matched": true
+    },
+    "passed_count": {
+      "expected": 14,
+      "actual": 14,
+      "matched": true
+    },
+    "failed_count": {
+      "expected": 0,
+      "actual": 0,
+      "matched": true
+    },
+    "skipped_count": {
+      "expected": 0,
+      "actual": 0,
+      "matched": true
+    },
+    "returncode": {
+      "expected": 0,
+      "actual": 0,
+      "matched": true
+    }
+  },
+  "refactored_execution": {
+    "total_count": {
+      "expected": 14,
+      "actual": 14,
+      "matched": true
+    },
+    "passed_count": {
+      "expected": 14,
+      "actual": 14,
+      "matched": true
+    },
+    "failed_count": {
+      "expected": 0,
+      "actual": 0,
+      "matched": true
+    },
+    "skipped_count": {
+      "expected": 0,
+      "actual": 0,
+      "matched": true
+    },
+    "returncode": {
+      "expected": 0,
+      "actual": 0,
+      "matched": true
+    }
+  },
+  "anchored_cases_comparison": {
+    "data is retained": {
+      "before": "Passed",
+      "after": "Passed",
+      "matched": true
+    },
+    "left, right and value": {
+      "before": "Passed",
+      "after": "Passed",
+      "matched": true
+    }
+  },
+  "learner_stub_untouched": {
+    "expected": true,
+    "actual": true,
+    "matched": true
+  },
+  "assertions": {
+    "learner_stub_unmodified": "PASSED",
+    "original_all_tests_passed": "PASSED",
+    "refactored_all_tests_passed": "PASSED",
+    "anchored_cases_passed_both": "PASSED",
+    "all_14_cases_equivalent": "PASSED",
+    "no_dependencies_added": "PASSED",
+    "public_api_preserved": "PASSED"
+  }
+}
