@@ -1,0 +1,94 @@
+{
+  "toml": {
+    "included": 14,
+    "excluded": 0
+  },
+  "test_file_sha256": {
+    "copy_a": "dca1a9f2f60d60692baac03005ed3b44e01c032e47934bc20270b9ca7c3431a1",
+    "copy_b": "dca1a9f2f60d60692baac03005ed3b44e01c032e47934bc20270b9ca7c3431a1",
+    "repo": "dca1a9f2f60d60692baac03005ed3b44e01c032e47934bc20270b9ca7c3431a1"
+  },
+  "executed_cases": 14,
+  "expected_vs_actual": [
+    {
+      "test": "reading empty buffer should fail",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "can read an item just written",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "each item may only be read once",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "items are read in the order they are written",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "full buffer can't be written to",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "a read frees up capacity for another write",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "read position is maintained even across multiple writes",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "items cleared out of buffer can't be read",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "clear frees up capacity for another write",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "clear does nothing on empty buffer",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "overwrite acts like write on non-full buffer",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "overwrite replaces the oldest item on full buffer",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "overwrite replaces the oldest item remaining in buffer following a read",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "initial clear does not affect wrapping around",
+      "expected": "Passed",
+      "actual": "Passed"
+    }
+  ],
+  "tool_versions": {
+    "pester": "6.2.0",
+    "powershell": "7.7.0"
+  },
+  "learner_stub": {
+    "Result": "Failed",
+    "Total": 14,
+    "Passed": 0,
+    "Failed": 14
+  }
+}

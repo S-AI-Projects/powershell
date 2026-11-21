@@ -1,0 +1,20 @@
+{
+  "exercise": "exercises/practice/circular-buffer",
+  "config_files": {
+    "solution": [
+      "CircularBuffer.ps1"
+    ],
+    "test": [
+      "CircularBuffer.tests.ps1"
+    ],
+    "example": [
+      ".meta/CircularBuffer.example.ps1"
+    ]
+  },
+  "described_block": "CircularBuffer test cases",
+  "named_cases": [
+    "reading empty buffer should fail",
+    "can read an item just written"
+  ],
+  "pester_command": "Invoke-Pester -PassThru"
+}
