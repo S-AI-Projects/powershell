@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Trivial 1-digit cages -> 1",
+    "Sum": 1,
+    "Size": 1,
+    "Exclude": []
+  },
+  {
+    "name": "Trivial 1-digit cages -> 2",
+    "Sum": 2,
+    "Size": 1,
+    "Exclude": []
+  },
+  {
+    "name": "Trivial 1-digit cages -> 9",
+    "Sum": 9,
+    "Size": 1,
+    "Exclude": []
+  },
+  {
+    "name": "Cage with sum 45",
+    "Sum": 45,
+    "Size": 9,
+    "Exclude": []
+  },
+  {
+    "name": "Cage with only 1 combination",
+    "Sum": 7,
+    "Size": 3,
+    "Exclude": []
+  },
+  {
+    "name": "Cage with several combinations",
+    "Sum": 10,
+    "Size": 2,
+    "Exclude": []
+  },
+  {
+    "name": "Cage restricted (exclude 1,4)",
+    "Sum": 10,
+    "Size": 2,
+    "Exclude": [
+      1,
+      4
+    ]
+  }
+]

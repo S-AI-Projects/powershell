@@ -1,0 +1,122 @@
+{
+  "reference": {
+    "implementation": "recursive_backtracking",
+    "total": 13,
+    "failed": 0,
+    "passed": 13,
+    "cases": [
+      {
+        "name": "Cage with sum 45 contains all digits 1:9",
+        "status": "PASS"
+      },
+      {
+        "name": "Cage with only 1 possible combination",
+        "status": "PASS"
+      },
+      {
+        "name": "Cage with several combinations",
+        "status": "PASS"
+      },
+      {
+        "name": "Cage with several combinations that is restricted",
+        "status": "PASS"
+      },
+      {
+        "name": "Trivial 1-digit cages -> 1",
+        "status": "PASS"
+      },
+      {
+        "name": "Trivial 1-digit cages -> 2",
+        "status": "PASS"
+      },
+      {
+        "name": "Trivial 1-digit cages -> 3",
+        "status": "PASS"
+      },
+      {
+        "name": "Trivial 1-digit cages -> 4",
+        "status": "PASS"
+      },
+      {
+        "name": "Trivial 1-digit cages -> 5",
+        "status": "PASS"
+      },
+      {
+        "name": "Trivial 1-digit cages -> 6",
+        "status": "PASS"
+      },
+      {
+        "name": "Trivial 1-digit cages -> 7",
+        "status": "PASS"
+      },
+      {
+        "name": "Trivial 1-digit cages -> 8",
+        "status": "PASS"
+      },
+      {
+        "name": "Trivial 1-digit cages -> 9",
+        "status": "PASS"
+      }
+    ]
+  },
+  "alternative": {
+    "implementation": "bitmask_iterative",
+    "total": 13,
+    "failed": 0,
+    "passed": 13,
+    "cases": [
+      {
+        "name": "Cage with sum 45 contains all digits 1:9",
+        "status": "PASS"
+      },
+      {
+        "name": "Cage with only 1 possible combination",
+        "status": "PASS"
+      },
+      {
+        "name": "Cage with several combinations",
+        "status": "PASS"
+      },
+      {
+        "name": "Cage with several combinations that is restricted",
+        "status": "PASS"
+      },
+      {
+        "name": "Trivial 1-digit cages -> 1",
+        "status": "PASS"
+      },
+      {
+        "name": "Trivial 1-digit cages -> 2",
+        "status": "PASS"
+      },
+      {
+        "name": "Trivial 1-digit cages -> 3",
+        "status": "PASS"
+      },
+      {
+        "name": "Trivial 1-digit cages -> 4",
+        "status": "PASS"
+      },
+      {
+        "name": "Trivial 1-digit cages -> 5",
+        "status": "PASS"
+      },
+      {
+        "name": "Trivial 1-digit cages -> 6",
+        "status": "PASS"
+      },
+      {
+        "name": "Trivial 1-digit cages -> 7",
+        "status": "PASS"
+      },
+      {
+        "name": "Trivial 1-digit cages -> 8",
+        "status": "PASS"
+      },
+      {
+        "name": "Trivial 1-digit cages -> 9",
+        "status": "PASS"
+      }
+    ]
+  }
+}
