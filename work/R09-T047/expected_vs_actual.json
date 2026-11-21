@@ -1,0 +1,45 @@
+{
+  "pester_reference": {
+    "total": 5,
+    "failed": 0,
+    "passed": 5,
+    "skipped": 0,
+    "cases": [
+      {
+        "name": "first prime",
+        "status": "PASS"
+      },
+      {
+        "name": "second prime",
+        "status": "PASS"
+      },
+      {
+        "name": "sixth prime",
+        "status": "PASS"
+      },
+      {
+        "name": "big prime",
+        "status": "PASS"
+      },
+      {
+        "name": "there is no zeroth prime",
+        "status": "PASS"
+      }
+    ]
+  },
+  "micro_example": {
+    "expected": "MICRO:6",
+    "actual": "MICRO:6",
+    "match": true
+  },
+  "pitfall": {
+    "expected": "PITFALL:array:count=2:last=6",
+    "actual": "PITFALL:array:count=2:last=6",
+    "match": true
+  },
+  "hint_agreement": {
+    "summary": "The micro-example confirms that `return $arr[-1]` emits a scalar. The pitfall confirms that adding a Write-Output before the return causes pipeline pollution, turning the caller's result into an array.",
+    "micro_match": true,
+    "pitfall_match": true
+  }
+}

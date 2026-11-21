@@ -1,0 +1,30 @@
+{
+  "config_paths": {
+    "solution": "/Users/ktom3006/Projects/powershell/exercises/practice/nth-prime/NthPrime.ps1",
+    "test": "/Users/ktom3006/Projects/powershell/exercises/practice/nth-prime/NthPrime.tests.ps1",
+    "example": "/Users/ktom3006/Projects/powershell/exercises/practice/nth-prime/.meta/NthPrime.example.ps1"
+  },
+  "anchored_cases": [
+    "NthPrime Tests",
+    "first prime",
+    "second prime"
+  ],
+  "construct_identified": {
+    "file": ".meta/NthPrime.example.ps1",
+    "mechanism": "explicit `return $primes[-1]` \u2014 returns the last element of an accumulated array as a scalar",
+    "key_lines": [
+      "$primes += $i        # array accumulation via += operator",
+      "return $primes[-1]   # explicit return of last element (negative indexing)"
+    ]
+  },
+  "micro_example": {
+    "description": "Accumulate first N even numbers, return the last one",
+    "script": "\n# Micro-example: array accumulation + negative indexing + explicit return\n# (does NOT solve nth-prime \u2014 just demonstrates the construct)\nfunction Get-LastEven {\n    param([int]$Count)\n    $evens = @()\n    $n = 2\n    while ($evens.Count -lt $Count) {\n        $evens += $n\n        $n += 2\n    }\n    return $evens[-1]   # explicit return of last element (a scalar)\n}\n\n$result = Get-LastEven -Count 3\nWrite-Output \"MICRO:$result\"\n",
+    "expected_output": "MICRO:6"
+  },
+  "pitfall_example": {
+    "description": "Pipeline pollution: Write-Output before return causes caller to receive an array",
+    "script": "\n# PITFALL: pipeline pollution \u2014 extra Write-Output before the return\n# means the caller sees an array, not just the last element.\nfunction Get-LastEvenPolluted {\n    param([int]$Count)\n    $evens = @()\n    $n = 2\n    while ($evens.Count -lt $Count) {\n        $evens += $n\n        $n += 2\n    }\n    # BUG: accidentally emits something to the pipeline before the value\n    Write-Output \"debug: computing...\"   # <-- pipeline pollution\n    return $evens[-1]                    # <-- also emits to pipeline\n}\n\n$result = Get-LastEvenPolluted -Count 3\n# $result is now an ARRAY: @(\"debug: computing...\", 6)\n# Using $result.Count or type shows it's not a plain scalar\nif ($result -is [array]) {\n    Write-Output \"PITFALL:array:count=$($result.Count):last=$($result[-1])\"\n} else {\n    Write-Output \"PITFALL:scalar:$result\"\n}\n",
+    "expected_output": "PITFALL:array:count=2:last=6"
+  }
+}
