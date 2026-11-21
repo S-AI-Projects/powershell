@@ -1,0 +1,62 @@
+{
+  "executed_cases": 9,
+  "tool_versions": {
+    "pester": "6.2.0",
+    "powershell": "7.7.0"
+  },
+  "expected_vs_actual": [
+    {
+      "test": "year not divisible by 4 in common year",
+      "original": "Passed",
+      "mutant": "Passed"
+    },
+    {
+      "test": "year divisible by 2, not divisible by 4 in common year",
+      "original": "Passed",
+      "mutant": "Failed"
+    },
+    {
+      "test": "year divisible by 4, not divisible by 100 in leap year",
+      "original": "Passed",
+      "mutant": "Passed"
+    },
+    {
+      "test": "year divisible by 4 and 5 is still a leap year",
+      "original": "Passed",
+      "mutant": "Passed"
+    },
+    {
+      "test": "year divisible by 100, not divisible by 400 in common year",
+      "original": "Passed",
+      "mutant": "Passed"
+    },
+    {
+      "test": "year divisible by 100 but not by 3 is still not a leap year",
+      "original": "Passed",
+      "mutant": "Passed"
+    },
+    {
+      "test": "year divisible by 400 in leap year",
+      "original": "Passed",
+      "mutant": "Passed"
+    },
+    {
+      "test": "year divisible by 400 but not by 125 is still a leap year",
+      "original": "Passed",
+      "mutant": "Passed"
+    },
+    {
+      "test": "year divisible by 200, not divisible by 400 in common year",
+      "original": "Passed",
+      "mutant": "Passed"
+    }
+  ],
+  "smallest_differing_year": 2,
+  "differing_years": 600,
+  "learner_stub": {
+    "Result": "Failed",
+    "Total": 9,
+    "Passed": 0,
+    "Failed": 9
+  }
+}
