@@ -11,12 +11,15 @@
 
 [5d22a120-ba0c-428c-bd25-8682235d83e8]
 description = "zero"
+comment = "Covered by the 'zero' test in Say.tests.ps1: Invoke-Say -Number 0 must return exactly 'zero' (Should -BeExactly is case-sensitive). In the reference, the early return for numbers below 20 yields $ONES[0]; without it the tens logic would use $TENS[0], which is an empty string."
 
 [9b5eed77-dbf6-439d-b920-3f7eb58928f6]
 description = "one"
+comment = "Covered by the 'one' test in Say.tests.ps1: Invoke-Say -Number 1 must return exactly 'one'. In the reference, the same early return for numbers below 20 yields $ONES[1]."
 
 [7c499be1-612e-4096-a5e1-43b2f719406d]
 description = "fourteen"
+comment = "Covered by the 'fourteen' test in Say.tests.ps1: Invoke-Say -Number 14 must return exactly 'fourteen'. Teens are irregular words, so the reference does not build them from $TENS; the early return for numbers below 20 yields $ONES[14]."
 
 [f541dd8e-f070-4329-92b4-b7ce2fcf06b4]
 description = "twenty"

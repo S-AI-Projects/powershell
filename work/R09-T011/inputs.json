@@ -1,0 +1,19 @@
+{
+  "config_files": {
+    "solution": [
+      "Say.ps1"
+    ],
+    "test": [
+      "Say.tests.ps1"
+    ],
+    "example": [
+      ".meta/Say.example.ps1"
+    ]
+  },
+  "uuids": {
+    "5d22a120-ba0c-428c-bd25-8682235d83e8": "zero",
+    "9b5eed77-dbf6-439d-b920-3f7eb58928f6": "one",
+    "7c499be1-612e-4096-a5e1-43b2f719406d": "fourteen"
+  },
+  "pester_command": "Invoke-Pester -PassThru"
+}

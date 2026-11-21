@@ -1,0 +1,119 @@
+{
+  "toml_counts": {
+    "before": {
+      "included": 19,
+      "excluded": 0
+    },
+    "after": {
+      "included": 19,
+      "excluded": 0
+    }
+  },
+  "expected_vs_actual": [
+    {
+      "test": "a big number",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "fourteen",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "nine hundred ninety-nine",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "ninety-nine",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "numbers above 999,999,999,999 are out of range",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "numbers below zero are out of range",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "one",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "one billion",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "one hundred",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "one hundred twenty-three",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "one million",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "one million two thousand three hundred forty-five",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "one thousand",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "one thousand two hundred thirty-four",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "thirty",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "twenty",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "twenty-two",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "two hundred",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "zero",
+      "expected": "Passed",
+      "actual": "Passed"
+    }
+  ],
+  "tool_versions": {
+    "pester": "6.2.0",
+    "powershell": "7.7.0"
+  },
+  "learner_stub": {
+    "Result": "Failed",
+    "Total": 19,
+    "Passed": 0,
+    "Failed": 19
+  }
+}
