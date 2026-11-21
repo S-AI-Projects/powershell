@@ -1,0 +1,70 @@
+{
+  "anchored_describe_block": {
+    "expected": "Test Invoke-Darts.ps1",
+    "actual": "Test Invoke-Darts.ps1",
+    "matched": true
+  },
+  "correctness_pester_execution": {
+    "total_count": {
+      "expected": 13,
+      "actual": 13,
+      "matched": true
+    },
+    "passed_count": {
+      "expected": 13,
+      "actual": 13,
+      "matched": true
+    },
+    "failed_count": {
+      "expected": 0,
+      "actual": 0,
+      "matched": true
+    },
+    "skipped_count": {
+      "expected": 0,
+      "actual": 0,
+      "matched": true
+    },
+    "returncode": {
+      "expected": 0,
+      "actual": 0,
+      "matched": true
+    }
+  },
+  "anchored_cases_status": {
+    "Missed target": {
+      "expected": "Passed",
+      "actual": "Passed",
+      "matched": true
+    },
+    "On the outer circle": {
+      "expected": "Passed",
+      "actual": "Passed",
+      "matched": true
+    }
+  },
+  "performance_cost_breakdown": {
+    "process_startup_median_ms": 151.02,
+    "script_compilation_median_ms": 0.07,
+    "algorithm_execution_medians_microseconds": {
+      "Inner circle (center)": 31.08,
+      "On the inner circle": 31.5,
+      "On the middle circle": 28.79,
+      "On the outer circle": 31.0,
+      "Missed target": 29.25
+    }
+  },
+  "learner_stub_untouched": {
+    "expected": true,
+    "actual": true,
+    "matched": true
+  },
+  "assertions": {
+    "learner_stub_unmodified": "PASSED",
+    "pester_13_tests_passed": "PASSED",
+    "anchored_cases_passed": "PASSED",
+    "domain_measurements_completed": "PASSED",
+    "startup_separated_from_algorithm": "PASSED",
+    "no_unmeasured_speedups_claimed": "PASSED"
+  }
+}

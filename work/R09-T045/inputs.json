@@ -1,0 +1,108 @@
+{
+  "exercise": "darts",
+  "resolved_paths": {
+    "solution": "Darts.ps1",
+    "test": "Darts.tests.ps1",
+    "example": ".meta/Darts.example.ps1"
+  },
+  "anchored_cases": [
+    "Test Invoke-Darts.ps1",
+    "Missed target",
+    "On the outer circle"
+  ],
+  "domain_input_definition": {
+    "type": "Fixed 2D Cartesian coordinate pair (X, Y) in Euclidean plane",
+    "dimensionality": 2,
+    "linear_outer_loop": false,
+    "complexity": "O(1) per throw"
+  },
+  "repetitions": 7,
+  "valid_domain_inputs": [
+    {
+      "name": "Inner circle (center)",
+      "coordinates": [
+        0.0,
+        0.0
+      ],
+      "expected_score": 10
+    },
+    {
+      "name": "On the inner circle",
+      "coordinates": [
+        0.0,
+        -1.0
+      ],
+      "expected_score": 10
+    },
+    {
+      "name": "On the middle circle",
+      "coordinates": [
+        -5.0,
+        0.0
+      ],
+      "expected_score": 5
+    },
+    {
+      "name": "On the outer circle",
+      "coordinates": [
+        0.0,
+        10.0
+      ],
+      "expected_score": 1
+    },
+    {
+      "name": "Missed target",
+      "coordinates": [
+        -9.0,
+        9.0
+      ],
+      "expected_score": 0
+    }
+  ],
+  "branch_operation_table": [
+    {
+      "branch": "Inner Circle (r <= 1)",
+      "condition": "$_ -le 1",
+      "score": 10,
+      "arithmetic_ops": 4,
+      "comparisons": 1,
+      "total_ops": 5,
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "example_coordinates": "(0, 0) or (0, -1)"
+    },
+    {
+      "branch": "Middle Circle (1 < r <= 5)",
+      "condition": "$_ -le 5",
+      "score": 5,
+      "arithmetic_ops": 4,
+      "comparisons": 2,
+      "total_ops": 6,
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "example_coordinates": "(-5, 0) or (-3.5, 3.5)"
+    },
+    {
+      "branch": "Outer Circle (5 < r <= 10)",
+      "condition": "$_ -le 10",
+      "score": 1,
+      "arithmetic_ops": 4,
+      "comparisons": 3,
+      "total_ops": 7,
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "example_coordinates": "(0, 10) or (-7, 7)"
+    },
+    {
+      "branch": "Missed Target (r > 10)",
+      "condition": "default",
+      "score": 0,
+      "arithmetic_ops": 4,
+      "comparisons": 3,
+      "total_ops": 7,
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "example_coordinates": "(-9, 9) or (7.1, -7.1)"
+    }
+  ]
+}
