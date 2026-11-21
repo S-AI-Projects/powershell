@@ -1,0 +1,79 @@
+{
+  "anchored_describe_block": {
+    "expected": "ErrorHandling test cases",
+    "actual": "ErrorHandling test cases",
+    "matched": true
+  },
+  "reference_execution": {
+    "total_count": {
+      "expected": 6,
+      "actual": 6,
+      "matched": true
+    },
+    "passed_count": {
+      "expected": 6,
+      "actual": 6,
+      "matched": true
+    },
+    "failed_count": {
+      "expected": 0,
+      "actual": 0,
+      "matched": true
+    },
+    "skipped_count": {
+      "expected": 0,
+      "actual": 0,
+      "matched": true
+    },
+    "returncode": {
+      "expected": 0,
+      "actual": 0,
+      "matched": true
+    }
+  },
+  "deliberate_mutant_execution": {
+    "total_count": {
+      "expected": 6,
+      "actual": 6,
+      "matched": true
+    },
+    "passed_count": {
+      "expected": 5,
+      "actual": 5,
+      "matched": true
+    },
+    "failed_count": {
+      "expected": 1,
+      "actual": 1,
+      "matched": true
+    },
+    "failing_test_name": {
+      "expected": "ValueErrorHandling : valid input",
+      "actual": "ValueErrorHandling : valid input",
+      "matched": true
+    },
+    "test_25_comparison": {
+      "expected": "I'm 25 years old!",
+      "actual": "I'm 26 years old!",
+      "assertion_failed_as_expected": true
+    },
+    "minimal_input_18_comparison": {
+      "expected": "I'm 18 years old!",
+      "actual": "I'm 19 years old!",
+      "assertion_failed_as_expected": true
+    }
+  },
+  "learner_stub_untouched": {
+    "expected": true,
+    "actual": true,
+    "matched": true
+  },
+  "assertions": {
+    "learner_stub_unmodified": "PASSED",
+    "reference_all_tests_passed": "PASSED",
+    "mutant_rejected_by_named_case": "PASSED",
+    "unmutated_anchored_case_passed": "PASSED",
+    "minimal_input_reduced": "PASSED",
+    "gap_boundary_mutant_documented": "PASSED"
+  }
+}
