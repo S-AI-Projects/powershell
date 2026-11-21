@@ -1,0 +1,61 @@
+{
+  "describe_block": {
+    "expected": "Test Invoke-ArmstrongNumbers.ps1",
+    "actual": "Test Invoke-ArmstrongNumbers.ps1",
+    "matched": true
+  },
+  "anchored_cases": {
+    "Zero is an Armstrong number": {
+      "expected_result": "Passed",
+      "actual_result": "Passed",
+      "passed": true,
+      "matched": true
+    },
+    "Single-digit numbers are Armstrong numbers": {
+      "expected_result": "Passed",
+      "actual_result": "Passed",
+      "passed": true,
+      "matched": true
+    }
+  },
+  "execution_counts": {
+    "total_count": {
+      "expected": 9,
+      "actual": 9,
+      "matched": true
+    },
+    "passed_count": {
+      "expected": 9,
+      "actual": 9,
+      "matched": true
+    },
+    "failed_count": {
+      "expected": 0,
+      "actual": 0,
+      "matched": true
+    },
+    "skipped_count": {
+      "expected": 0,
+      "actual": 0,
+      "matched": true
+    }
+  },
+  "two_copy_regeneration": {
+    "expected_diff": "",
+    "actual_diff": "",
+    "expected_dropped_cases": 0,
+    "actual_dropped_cases": 0,
+    "hashes_matched": true,
+    "matched": true
+  },
+  "learner_stub_untouched": {
+    "expected": true,
+    "actual": true,
+    "matched": true
+  },
+  "pester_returncode": {
+    "expected": 0,
+    "actual": 0,
+    "matched": true
+  }
+}
