@@ -44,14 +44,14 @@
     }
   },
   "performance_cost_breakdown": {
-    "process_startup_median_ms": 148.88,
-    "script_compilation_median_ms": 0.08,
+    "process_startup_median_ms": 151.02,
+    "script_compilation_median_ms": 0.07,
     "algorithm_execution_medians_microseconds": {
-      "Inner circle (center)": 28.58,
-      "On the inner circle": 38.79,
-      "On the middle circle": 35.42,
-      "On the outer circle": 32.62,
-      "Missed target": 27.88
+      "Inner circle (center)": 31.08,
+      "On the inner circle": 31.5,
+      "On the middle circle": 28.79,
+      "On the outer circle": 31.0,
+      "Missed target": 29.25
     }
   },
   "learner_stub_untouched": {

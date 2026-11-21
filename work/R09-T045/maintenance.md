@@ -61,12 +61,12 @@ When executing PowerShell code, measured wall-clock times span four orders of ma
 
 | Phase | Description | Measured Median | Scale |
 |---|---|---|---|
-| **Process Startup** | `pwsh` binary launch, .NET CLR initialization, runspace creation | **148.88 ms** | 10^2 ms |
-| **Script Compilation** | Dot-sourcing `Darts.ps1`, AST generation, parameter binding JIT | **0.08 ms** | 10^0 ms |
+| **Process Startup** | `pwsh` binary launch, .NET CLR initialization, runspace creation | **151.02 ms** | 10^2 ms |
+| **Script Compilation** | Dot-sourcing `Darts.ps1`, AST generation, parameter binding JIT | **0.07 ms** | 10^0 ms |
 | **Algorithm Execution** | Pure invocation of `Invoke-Darts -X ... -Y ...` in-memory | **~0.035 ms (35 µs)** | 10^-2 ms |
 
 ### Key Takeaway:
-The actual `Invoke-Darts` algorithm executes in approximately **35 microseconds**. Spawning a new `pwsh` process takes ~148.88 ms, which is **>5,000x longer** than the mathematical algorithm itself. Profiling or benchmarking PowerShell functions must isolate in-memory execution to avoid conflating CLR process startup with algorithm cost.
+The actual `Invoke-Darts` algorithm executes in approximately **35 microseconds**. Spawning a new `pwsh` process takes ~151.02 ms, which is **>5,000x longer** than the mathematical algorithm itself. Profiling or benchmarking PowerShell functions must isolate in-memory execution to avoid conflating CLR process startup with algorithm cost.
 
 ---
 
@@ -76,11 +76,11 @@ Measurements were captured in an isolated temporary directory over **7 repetitio
 
 | Test Case | Target Zone | Coordinates (X, Y) | Expected | Actual | Median Duration |
 |---|---|---|---|---|---|
-| Inner circle (center) | `Inner (r <= 1)` | `(0.0, 0.0)` | `10` | `10` | **28.58 µs** |
-| On the inner circle | `Inner boundary (r = 1)` | `(0.0, -1.0)` | `10` | `10` | **38.79 µs** |
-| On the middle circle | `Middle boundary (r = 5)` | `(-5.0, 0.0)` | `5` | `5` | **35.42 µs** |
-| On the outer circle | `Outer boundary (r = 10)` | `(0.0, 10.0)` | `1` | `1` | **32.62 µs** |
-| Missed target | `Outside (r > 10)` | `(-9.0, 9.0)` | `0` | `0` | **27.88 µs** |
+| Inner circle (center) | `Inner (r <= 1)` | `(0.0, 0.0)` | `10` | `10` | **31.08 µs** |
+| On the inner circle | `Inner boundary (r = 1)` | `(0.0, -1.0)` | `10` | `10` | **31.5 µs** |
+| On the middle circle | `Middle boundary (r = 5)` | `(-5.0, 0.0)` | `5` | `5` | **28.79 µs** |
+| On the outer circle | `Outer boundary (r = 10)` | `(0.0, 10.0)` | `1` | `1` | **31.0 µs** |
+| Missed target | `Outside (r > 10)` | `(-9.0, 9.0)` | `0` | `0` | **29.25 µs** |
 
 - **Consistency:** All 5 representative domain cases complete within 30–60 microseconds.
 - **Correctness First:** All 13 Pester test cases pass (`FailedCount == 0`, `TotalCount == 13`) before timing measurements were captured.
