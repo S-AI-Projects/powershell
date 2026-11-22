@@ -1,0 +1,71 @@
+{
+  "exercise_directory": "/Users/ktom3006/Projects/powershell/exercises/practice/knapsack",
+  "resolved_paths": {
+    "solution": "exercises/practice/knapsack/Knapsack.ps1",
+    "test": "exercises/practice/knapsack/Knapsack.tests.ps1",
+    "example": "exercises/practice/knapsack/.meta/Knapsack.example.ps1"
+  },
+  "anchored_cases": {
+    "Knapsack test cases": {
+      "role": "Describe container block"
+    },
+    "no items": {
+      "MaxWeight": 100,
+      "Items": [],
+      "expected": 0
+    },
+    "one item, too heavy": {
+      "MaxWeight": 10,
+      "Items": [
+        {
+          "Weight": 100,
+          "Value": 1
+        }
+      ],
+      "expected": 0
+    }
+  },
+  "decision_table": [
+    {
+      "condition": "Items list is empty (Items.Count == 0), MaxWeight >= 0",
+      "test_case": "no items",
+      "input_items": [],
+      "max_weight": 100,
+      "expected_outcome": 0,
+      "mathematical_derivation": "Empty candidate set: sum of values over empty set is 0. Maximum possible value is 0.",
+      "contract_status": "Fully Specified"
+    },
+    {
+      "condition": "Items list contains 1 item whose Weight > MaxWeight",
+      "test_case": "one item, too heavy",
+      "input_items": [
+        {
+          "Weight": 100,
+          "Value": 1
+        }
+      ],
+      "max_weight": 10,
+      "expected_outcome": 0,
+      "mathematical_derivation": "No admissible subsets: only subsets are {} and {item_1}. Weight({item_1}) = 100 > 10. Only feasible subset is {}, with total value 0.",
+      "contract_status": "Fully Specified"
+    },
+    {
+      "condition": "Items list contains multiple items with combinations within MaxWeight",
+      "test_case": "example knapsack / 5 items / 8 items / 15 items",
+      "input_items": "Various valid items",
+      "max_weight": "Various positive integers",
+      "expected_outcome": "Max value over all feasible subsets S where sum(w_i) <= W",
+      "mathematical_derivation": "Classic 0-1 knapsack dynamic programming optimum.",
+      "contract_status": "Fully Specified"
+    },
+    {
+      "condition": "Negative MaxWeight, non-positive item weights/values, null items, or non-object items",
+      "test_case": "None (out-of-contract)",
+      "input_items": "Invalid / unspecified types or values",
+      "max_weight": "Unspecified (e.g. < 0)",
+      "expected_outcome": "Unspecified by the exercise contract",
+      "mathematical_derivation": "Specification states: 'All values given will be strictly positive.' and 'carrying capacity'. No exception, coercion, or error handling is prescribed.",
+      "contract_status": "Unspecified (Do not invent extra exception rules or type coercions)"
+    }
+  ]
+}

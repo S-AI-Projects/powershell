@@ -1,0 +1,26 @@
+{
+  "pester_run": {
+    "returncode": 0,
+    "total": 7,
+    "failed": 0,
+    "passed": 7,
+    "skipped": 0,
+    "anchored_assertions": {
+      "Knapsack test cases": true,
+      "no items": true,
+      "one item, too heavy": true
+    }
+  },
+  "reproduction_results": {
+    "no_items": {
+      "expected": 0,
+      "actual": 0,
+      "matches": true
+    },
+    "one_item_too_heavy": {
+      "expected": 0,
+      "actual": 0,
+      "matches": true
+    }
+  }
+}
