@@ -1,0 +1,26 @@
+[
+  {
+    "name": "worked example",
+    "input": "Go go, can't stop"
+  },
+  {
+    "name": "cramped list",
+    "input": "one,two,three"
+  },
+  {
+    "name": "apostrophes",
+    "input": "can, can't, 'can't'"
+  },
+  {
+    "name": "empty",
+    "input": ""
+  },
+  {
+    "name": "spec example",
+    "input": "\"That's the password: 'PASSWORD 123'!\", cried the Special Agent.\nSo I fled."
+  },
+  {
+    "name": "number 100",
+    "input": "It costs 100 dollars."
+  }
+]
