@@ -1,0 +1,37 @@
+{
+  "metadata_validation": {
+    "real_config": {
+      "expected": "PASS",
+      "actual": "PASS"
+    },
+    "invalid_fixtures": {
+      "missing_example": {
+        "expected_rejection": true,
+        "error_message": "Declared file missing in category 'example': '.meta/MissingSpaceAge.example.ps1' does not exist at '/Users/ktom3006/Projects/powershell/exercises/practice/space-age/.meta/MissingSpaceAge.example.ps1'",
+        "status": "PASS"
+      },
+      "missing_test": {
+        "expected_rejection": true,
+        "error_message": "Declared file missing in category 'test': 'SpaceAge.tests.nonexistent.ps1' does not exist at '/Users/ktom3006/Projects/powershell/exercises/practice/space-age/SpaceAge.tests.nonexistent.ps1'",
+        "status": "PASS"
+      },
+      "path_traversal": {
+        "expected_rejection": true,
+        "error_message": "Path traversal detected in category 'example': '../../nth-prime/.meta/NthPrime.example.ps1' escapes exercise root",
+        "status": "PASS"
+      }
+    }
+  },
+  "pester_results": {
+    "returncode": 0,
+    "total": 10,
+    "failed": 0,
+    "passed": 10,
+    "skipped": 0,
+    "anchored_cases_verified": {
+      "Space Age test cases": true,
+      "age on Earth": true,
+      "no planet provided should default to Earth": true
+    }
+  }
+}

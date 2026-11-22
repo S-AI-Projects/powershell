@@ -1,0 +1,65 @@
+{
+  "exercise_directory": "/Users/ktom3006/Projects/powershell/exercises/practice/space-age",
+  "parsed_files_metadata": {
+    "solution": [
+      "SpaceAge.ps1"
+    ],
+    "test": [
+      "SpaceAge.tests.ps1"
+    ],
+    "example": [
+      ".meta/SpaceAge.example.ps1"
+    ]
+  },
+  "resolved_paths": {
+    "solution": [
+      "exercises/practice/space-age/SpaceAge.ps1"
+    ],
+    "test": [
+      "exercises/practice/space-age/SpaceAge.tests.ps1"
+    ],
+    "example": [
+      "exercises/practice/space-age/.meta/SpaceAge.example.ps1"
+    ]
+  },
+  "anchored_cases": [
+    "Space Age test cases",
+    "age on Earth",
+    "no planet provided should default to Earth"
+  ],
+  "invalid_fixtures": {
+    "fixture_1_missing_example": {
+      "solution": [
+        "SpaceAge.ps1"
+      ],
+      "test": [
+        "SpaceAge.tests.ps1"
+      ],
+      "example": [
+        ".meta/MissingSpaceAge.example.ps1"
+      ]
+    },
+    "fixture_2_missing_test": {
+      "solution": [
+        "SpaceAge.ps1"
+      ],
+      "test": [
+        "SpaceAge.tests.nonexistent.ps1"
+      ],
+      "example": [
+        ".meta/SpaceAge.example.ps1"
+      ]
+    },
+    "fixture_3_path_traversal": {
+      "solution": [
+        "SpaceAge.ps1"
+      ],
+      "test": [
+        "SpaceAge.tests.ps1"
+      ],
+      "example": [
+        "../../nth-prime/.meta/NthPrime.example.ps1"
+      ]
+    }
+  }
+}
