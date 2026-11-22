@@ -1,0 +1,111 @@
+{
+  "real_config_errors": [],
+  "fixtures": [
+    {
+      "name": "missing reference",
+      "errors": [
+        [
+          "MISSING_FILE",
+          "example",
+          ".meta/Missing.example.ps1"
+        ]
+      ],
+      "exit_code": 1
+    },
+    {
+      "name": "missing test",
+      "errors": [
+        [
+          "MISSING_FILE",
+          "test",
+          "Missing.tests.ps1"
+        ]
+      ],
+      "exit_code": 1
+    },
+    {
+      "name": "outside exercise",
+      "errors": [
+        [
+          "OUTSIDE_EXERCISE",
+          "test",
+          "../connect/Connect.tests.ps1"
+        ]
+      ],
+      "exit_code": 1
+    }
+  ],
+  "executed_cases": 12,
+  "tool_versions": {
+    "pester": "6.2.0",
+    "powershell": "7.7.0"
+  },
+  "expected_vs_actual": [
+    {
+      "test": "an empty board has no winner",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "X can win on a 1x1 board",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "O can win on a 1x1 board",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "only edges does not make a winner",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "illegal diagonal does not make a winner",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "nobody wins crossing adjacent angles",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "X wins with left-hand dead end fork",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "X wins with right-hand dead end fork",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "X wins crossing from left to right",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "O wins crossing from top to bottom",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "X wins using a convoluted path",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "X wins using a spiral path",
+      "expected": "Passed",
+      "actual": "Passed"
+    }
+  ],
+  "learner_stub": {
+    "Result": "Failed",
+    "Total": 12,
+    "Passed": 0,
+    "Failed": 12
+  }
+}

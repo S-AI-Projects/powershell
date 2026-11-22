@@ -1,0 +1,47 @@
+{
+  "config_files": {
+    "solution": [
+      "Connect.ps1"
+    ],
+    "test": [
+      "Connect.tests.ps1"
+    ],
+    "example": [
+      ".meta/Connect.example.ps1"
+    ]
+  },
+  "named_cases": [
+    "an empty board has no winner",
+    "X can win on a 1x1 board"
+  ],
+  "fixtures": [
+    {
+      "name": "missing reference",
+      "key": "example",
+      "path": ".meta/Missing.example.ps1",
+      "expected_error": [
+        "MISSING_FILE",
+        "example"
+      ]
+    },
+    {
+      "name": "missing test",
+      "key": "test",
+      "path": "Missing.tests.ps1",
+      "expected_error": [
+        "MISSING_FILE",
+        "test"
+      ]
+    },
+    {
+      "name": "outside exercise",
+      "key": "test",
+      "path": "../connect/Connect.tests.ps1",
+      "expected_error": [
+        "OUTSIDE_EXERCISE",
+        "test"
+      ]
+    }
+  ],
+  "pester_command": "Invoke-Pester -PassThru"
+}
