@@ -1,0 +1,160 @@
+{
+  "executed_cases": 16,
+  "tool_versions": {
+    "pester": "6.2.0",
+    "powershell": "7.7.0"
+  },
+  "expected_vs_actual": [
+    {
+      "test": "count one word",
+      "reference": "Passed",
+      "alternative": "Passed"
+    },
+    {
+      "test": "count one of each word",
+      "reference": "Passed",
+      "alternative": "Passed"
+    },
+    {
+      "test": "multiple occurrences of a word",
+      "reference": "Passed",
+      "alternative": "Passed"
+    },
+    {
+      "test": "handles cramped lists",
+      "reference": "Passed",
+      "alternative": "Passed"
+    },
+    {
+      "test": "handles expanded lists",
+      "reference": "Passed",
+      "alternative": "Passed"
+    },
+    {
+      "test": "ignore punctuation",
+      "reference": "Passed",
+      "alternative": "Passed"
+    },
+    {
+      "test": "include numbers",
+      "reference": "Passed",
+      "alternative": "Passed"
+    },
+    {
+      "test": "normalize case",
+      "reference": "Passed",
+      "alternative": "Passed"
+    },
+    {
+      "test": "with quotations",
+      "reference": "Passed",
+      "alternative": "Passed"
+    },
+    {
+      "test": "substrings from the beginning",
+      "reference": "Passed",
+      "alternative": "Passed"
+    },
+    {
+      "test": "multiple spaces not detected as a word",
+      "reference": "Passed",
+      "alternative": "Passed"
+    },
+    {
+      "test": "alternating word separators not detected as a word",
+      "reference": "Passed",
+      "alternative": "Passed"
+    },
+    {
+      "test": "quotation for word with apostrophe",
+      "reference": "Passed",
+      "alternative": "Passed"
+    },
+    {
+      "test": "with apostrophes",
+      "reference": "Passed",
+      "alternative": "Passed"
+    },
+    {
+      "test": "non alphanumeric",
+      "reference": "Passed",
+      "alternative": "Passed"
+    },
+    {
+      "test": "multiple apostrophes ignored",
+      "reference": "Passed",
+      "alternative": "Passed"
+    }
+  ],
+  "differences": [
+    {
+      "case": "spec example",
+      "instructions": {
+        "123": 1,
+        "agent": 1,
+        "cried": 1,
+        "fled": 1,
+        "i": 1,
+        "password": 2,
+        "so": 1,
+        "special": 1,
+        "that's": 1,
+        "the": 2
+      },
+      "reference": {
+        "cried": 1,
+        "i": 1,
+        "special": 1,
+        "so": 1,
+        "the": 2,
+        "agent": 1,
+        "that's": 1,
+        "3": 1,
+        "1": 1,
+        "password": 2,
+        "fled": 1,
+        "2": 1
+      },
+      "alternative": {
+        "password": 2,
+        "fled": 1,
+        "i": 1,
+        "123": 1,
+        "so": 1,
+        "cried": 1,
+        "special": 1,
+        "agent": 1,
+        "the": 2,
+        "that's": 1
+      }
+    },
+    {
+      "case": "number 100",
+      "instructions": {
+        "it": 1,
+        "costs": 1,
+        "100": 1,
+        "dollars": 1
+      },
+      "reference": {
+        "0": 2,
+        "dollars": 1,
+        "costs": 1,
+        "it": 1,
+        "1": 1
+      },
+      "alternative": {
+        "costs": 1,
+        "dollars": 1,
+        "it": 1,
+        "100": 1
+      }
+    }
+  ],
+  "learner_stub": {
+    "Result": "Failed",
+    "Total": 16,
+    "Passed": 0,
+    "Failed": 16
+  }
+}

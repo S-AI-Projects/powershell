@@ -1,0 +1,19 @@
+{
+  "config_files": {
+    "solution": [
+      "WordCount.ps1"
+    ],
+    "test": [
+      "WordCount.tests.ps1"
+    ],
+    "example": [
+      ".meta/WordCount.example.ps1"
+    ]
+  },
+  "named_cases": [
+    "count one word",
+    "count one of each word"
+  ],
+  "alternative": "alt/WordCountAlt.ps1",
+  "direct_cases_file": "cases.json"
+}
