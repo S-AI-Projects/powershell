@@ -32,6 +32,18 @@ Enum Status {
     ONGOING
 }
 
+# Cost, with n = length of the secret word (the specification does not bound n):
+#   [Hangman]::new  O(n)  builds the masked array
+#   Display()       O(n)  joins the masked array
+#   GetStatus()     O(n)  scans Masked for an underscore
+#   Guess($char)    O(n)  GetStatus() plus the -notin / -in scans, plus one pass over
+#                         Secret when the letter is new and correct
+# A game has at most (distinct letters in the word + 10) Guess calls that do work: it is lost
+# after 10 wrong or repeated guesses (RemainingGuesses starts at 9 and LOSE means below 0),
+# so a whole game costs O(n * (distinct letters + 10)).
+# Invariants: Masked[i] is "_" or a guessed letter that matches Secret[i] (PowerShell compares
+# letters without regard to case by default); RemainingGuesses only goes down on a wrong or a
+# repeated guess.
 Class Hangman {
     [int] $RemainingGuesses
     [Status] $Status

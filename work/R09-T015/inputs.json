@@ -1,0 +1,26 @@
+{
+  "config_files": {
+    "solution": [
+      "Hangman.ps1"
+    ],
+    "test": [
+      "Hangman.tests.ps1"
+    ],
+    "example": [
+      ".meta/Hangman.example.ps1"
+    ]
+  },
+  "input_size": "n = length of the secret word",
+  "sizes": [
+    100,
+    1000,
+    10000
+  ],
+  "repetitions": 7,
+  "startup_repetitions": 5,
+  "word": "abcdefghij repeated n/10 times; each of its 10 letters guessed once",
+  "named_cases": [
+    "test initially 9 failures are allowed"
+  ],
+  "pester_command": "Invoke-Pester -PassThru"
+}
