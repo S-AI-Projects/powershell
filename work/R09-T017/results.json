@@ -1,0 +1,72 @@
+{
+  "micro_examples": [
+    {
+      "code": "$rows = 'A', 'B' | ForEach-Object { \"row $_\" }\n$rows.GetType().Name\n$rows[0]\n",
+      "hint_output": [
+        "Object[]",
+        "row A"
+      ],
+      "actual_output": [
+        "Object[]",
+        "row A"
+      ]
+    },
+    {
+      "code": "$rows = 'A' | ForEach-Object { \"row $_\" }\n$rows.GetType().Name\n$rows[0]\n@($rows)[0]\n",
+      "hint_output": [
+        "String",
+        "r",
+        "row A"
+      ],
+      "actual_output": [
+        "String",
+        "r",
+        "row A"
+      ]
+    }
+  ],
+  "rows_for_A_without_early_return": "A,@,A",
+  "executed_cases": 6,
+  "tool_versions": {
+    "pester": "6.2.0",
+    "powershell": "7.7.0"
+  },
+  "expected_vs_actual": [
+    {
+      "test": "single 'A' row",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "no row containing 3 distinct groups of spaces",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "no row containing 3 distinct groups of spaces case-insensitive",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "odd diamond side length",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "even diamond side length",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "largest possible diamond",
+      "expected": "Passed",
+      "actual": "Passed"
+    }
+  ],
+  "learner_stub": {
+    "Result": "Failed",
+    "Total": 6,
+    "Passed": 0,
+    "Failed": 6
+  }
+}
