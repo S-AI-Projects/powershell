@@ -1,0 +1,54 @@
+{
+  "learner_file_hash_immutability": {
+    "initial": {
+      "PrimeFactors.ps1": "a0994c21644d06d3f293da94fd61baff0abaeae9216000bc986b4ff6ef337d49"
+    },
+    "post_mode1": {
+      "PrimeFactors.ps1": "a0994c21644d06d3f293da94fd61baff0abaeae9216000bc986b4ff6ef337d49"
+    },
+    "post_mode2": {
+      "PrimeFactors.ps1": "a0994c21644d06d3f293da94fd61baff0abaeae9216000bc986b4ff6ef337d49"
+    },
+    "final": {
+      "PrimeFactors.ps1": "a0994c21644d06d3f293da94fd61baff0abaeae9216000bc986b4ff6ef337d49"
+    },
+    "all_identical": true
+  },
+  "runs": {
+    "mode_1_reference": {
+      "expected_rc": 0,
+      "actual_rc": 0,
+      "total": 12,
+      "failed": 0,
+      "passed": 12,
+      "executed": 12,
+      "anchored_cases": {
+        "Test Invoke-PrimeFactors.ps1": true,
+        "no factors": true,
+        "prime number": true
+      },
+      "status": "PASS",
+      "tmp_cleaned": true
+    },
+    "mode_2_failing_reference": {
+      "expected_non_zero_exit": true,
+      "actual_rc": 1,
+      "total": 12,
+      "failed": 12,
+      "passed": 0,
+      "deliberately_failed_as_expected": true,
+      "status": "PASS",
+      "tmp_cleaned": true
+    },
+    "mode_3_empty_selection": {
+      "expected_non_zero_exit": true,
+      "actual_rc": 42,
+      "total": 12,
+      "executed": 0,
+      "notrun": 12,
+      "empty_selection_detected_and_rejected": true,
+      "status": "PASS",
+      "tmp_cleaned": true
+    }
+  }
+}
