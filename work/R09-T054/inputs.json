@@ -1,0 +1,28 @@
+{
+  "exercise": "micro-blog",
+  "task": "R09-T054",
+  "task_type": "Reference implementation refactor",
+  "named_cases": [
+    "English language short",
+    "English language long"
+  ],
+  "describe_block": "MicroBlog test cases",
+  "refactor_summary": "Renamed ambiguous $charArray to $textElementOffsets, added invariant comment, simplified to single-step substring truncation",
+  "config_paths": {
+    "authors": [
+      "glaxxie"
+    ],
+    "files": {
+      "solution": [
+        "MicroBlog.ps1"
+      ],
+      "test": [
+        "MicroBlog.tests.ps1"
+      ],
+      "example": [
+        ".meta/MicroBlog.example.ps1"
+      ]
+    },
+    "blurb": "Given an input string, truncate it to 5 characters."
+  }
+}
