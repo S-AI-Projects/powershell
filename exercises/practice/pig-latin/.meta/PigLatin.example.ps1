@@ -1,4 +1,14 @@
 #adapt from https://exercism.org/tracks/python/exercises/pig-latin/solutions/chuckwondo
+
+# Cost, with w = number of space-separated words, and m = average word length (total input length N = w * m):
+#   $Text -split " "    O(N)  splits the input string into w word tokens
+#   ForEach-Object      O(N)  evaluates regex match and string concatenation per word:
+#                             - regex match: O(m) linear scan anchored at start/end
+#                             - output construction: O(m) string interpolation and suffix appending
+#   -join " "           O(N)  assembles the translated array back into a single string
+# Invariant: Total work scales linearly with input size O(N), or O(w) for words of bounded length.
+# Auxiliary space is O(N) to store split tokens and translated word fragments.
+
 Function Invoke-PigLatin() {
     <#
     .SYNOPSIS
