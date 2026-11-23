@@ -1,0 +1,29 @@
+{
+  "exercise": "pig-latin",
+  "task": "R09-T055",
+  "task_type": "Reference complexity study",
+  "input_sizes_words": [
+    10,
+    100,
+    1000
+  ],
+  "repetitions_per_size": 7,
+  "startup_repetitions": 5,
+  "representative_word_set": [
+    "quick",
+    "fast",
+    "run",
+    "apple",
+    "pig",
+    "chair",
+    "queen",
+    "rhythm",
+    "yellow",
+    "under"
+  ],
+  "named_cases": [
+    "PigLatin test cases",
+    "word beginning with a",
+    "word beginning with p"
+  ]
+}
