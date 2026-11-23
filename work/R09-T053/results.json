@@ -1,0 +1,71 @@
+{
+  "reference": {
+    "total": 13,
+    "failed": 0,
+    "passed": 13,
+    "skipped": 0,
+    "notrun": 0,
+    "executed": 13,
+    "cases": {
+      "empty string": "PASS",
+      "two characters in a row": "PASS",
+      "two characters in a column": "PASS",
+      "simple": "PASS",
+      "single line": "PASS",
+      "first line longer than second line": "PASS",
+      "second line longer than first line": "PASS",
+      "mixed line length": "PASS",
+      "square": "PASS",
+      "rectangle": "PASS",
+      "triangle": "PASS",
+      "jagged triangle": "PASS",
+      "many Text": "PASS"
+    }
+  },
+  "mutant": {
+    "total": 13,
+    "failed": 4,
+    "passed": 9,
+    "skipped": 0,
+    "notrun": 0,
+    "executed": 13,
+    "cases": {
+      "empty string": "PASS",
+      "two characters in a row": "PASS",
+      "two characters in a column": "PASS",
+      "simple": "PASS",
+      "single line": "PASS",
+      "first line longer than second line": "PASS",
+      "second line longer than first line": "FAIL",
+      "mixed line length": "PASS",
+      "square": "PASS",
+      "rectangle": "PASS",
+      "triangle": "FAIL",
+      "jagged triangle": "FAIL",
+      "many Text": "FAIL"
+    }
+  },
+  "stub": {
+    "total": 13,
+    "failed": 13,
+    "passed": 0,
+    "skipped": 0,
+    "notrun": 0,
+    "executed": 13,
+    "cases": {
+      "empty string": "FAIL",
+      "two characters in a row": "FAIL",
+      "two characters in a column": "FAIL",
+      "simple": "FAIL",
+      "single line": "FAIL",
+      "first line longer than second line": "FAIL",
+      "second line longer than first line": "FAIL",
+      "mixed line length": "FAIL",
+      "square": "FAIL",
+      "rectangle": "FAIL",
+      "triangle": "FAIL",
+      "jagged triangle": "FAIL",
+      "many Text": "FAIL"
+    }
+  }
+}
