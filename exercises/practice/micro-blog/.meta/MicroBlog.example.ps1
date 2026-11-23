@@ -17,19 +17,16 @@ Function Invoke-MicroBlog() {
     Param(
         [string]$Post
     )
-    # Split the input string into individual characters
-    $charArray = [System.Globalization.StringInfo]::ParseCombiningCharacters($Post)
-    $charList = @()
+    # Parse the starting character offsets of each Unicode text element (grapheme cluster).
+    # [System.Globalization.StringInfo]::ParseCombiningCharacters returns an int[] of string indices, not characters.
+    $textElementOffsets = [System.Globalization.StringInfo]::ParseCombiningCharacters($Post)
 
-    $i = 0
-    while ($charList.Count -lt 5 -and $i -lt $charArray.Length) {
-        $start = $charArray[$i]
-        $end = $i -lt $charArray.Length - 1 ? $charArray[$i + 1] : $Post.Length
-        $character = $Post.Substring($start, $end - $start)
-
-        # Add the character to the list
-        $charList += $character
-        $i++
+    # Invariant: a micro-blog post is limited to at most 5 Unicode text elements (grapheme clusters).
+    if ($textElementOffsets.Length -le 5) {
+        return $Post
     }
-    -join $charList
+
+    # Truncate at the start offset of the 6th text element
+    $cutoffOffset = $textElementOffsets[5]
+    return $Post.Substring(0, $cutoffOffset)
 }
