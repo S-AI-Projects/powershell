@@ -1,0 +1,35 @@
+{
+  "exercise": "alphametics",
+  "task": "R09-T059",
+  "task_type": "Isolated test runner",
+  "runner_command": "python3 tools/course_checks/r09-t059.py",
+  "named_cases": [
+    "puzzle with three letters",
+    "solution must have unique value for each letter"
+  ],
+  "describe_block": "Alphametics test cases",
+  "modes": [
+    "real reference",
+    "failing reference",
+    "empty selection",
+    "learner stub"
+  ],
+  "config_paths": {
+    "authors": [
+      "glaxxie"
+    ],
+    "files": {
+      "solution": [
+        "Alphametics.ps1"
+      ],
+      "test": [
+        "Alphametics.tests.ps1"
+      ],
+      "example": [
+        ".meta/Alphametics.example.ps1"
+      ]
+    },
+    "test_runner": false,
+    "blurb": "Given an alphametics puzzle, find the correct solution."
+  }
+}
