@@ -1,0 +1,41 @@
+{
+  "exercise": "all-your-base",
+  "task": "R09-T060",
+  "task_type": "Contract examples",
+  "named_cases": [
+    "single bit one to decimal",
+    "binary to single decimal"
+  ],
+  "describe_block": "All your base test cases",
+  "selected_reproductions": {
+    "single_bit_one_to_decimal": {
+      "input": "@(1) base 2->10",
+      "output": [
+        1
+      ]
+    },
+    "binary_to_single_decimal": {
+      "input": "@(1,0,1) base 2->10",
+      "output": [
+        5
+      ]
+    }
+  },
+  "config_paths": {
+    "authors": [
+      "glaxxie"
+    ],
+    "files": {
+      "solution": [
+        "AllYourBase.ps1"
+      ],
+      "test": [
+        "AllYourBase.tests.ps1"
+      ],
+      "example": [
+        ".meta/AllYourBase.example.ps1"
+      ]
+    },
+    "blurb": "Convert a number, represented as a sequence of digits in one base, to any other base."
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "reproduced_cases": {
+    "single_bit_one_to_decimal": {
+      "input": "@(1) base 2->10",
+      "output": [
+        1
+      ]
+    },
+    "binary_to_single_decimal": {
+      "input": "@(1,0,1) base 2->10",
+      "output": [
+        5
+      ]
+    }
+  },
+  "reference": {
+    "total": 21,
+    "passed": 21,
+    "failed": 0
+  },
+  "stub": {
+    "total": 21,
+    "passed": 0,
+    "failed": 21
+  }
+}
