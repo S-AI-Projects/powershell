@@ -1,0 +1,28 @@
+{
+  "reference": {
+    "total": 7,
+    "passed": 7,
+    "failed": 0
+  },
+  "stub": {
+    "total": 7,
+    "passed": 0,
+    "failed": 7
+  },
+  "micro_examples": {
+    "example_1": {
+      "code": "function Get-Code {\n    param([int]$first, [int]$second)\n    return $first * 10 + $second\n}\n$result = Get-Code -first 1 -second 0\n$result.GetType().Name\n$result",
+      "output": [
+        "Int32",
+        "10"
+      ]
+    },
+    "example_2": {
+      "code": "function Get-CodePitfall {\n    param([int]$first, [int]$second)\n    return \"$first$second\"\n}\n$result = Get-CodePitfall -first 1 -second 0\n$result.GetType().Name\n$result",
+      "output": [
+        "String",
+        "10"
+      ]
+    }
+  }
+}
