@@ -1,0 +1,31 @@
+{
+  "exercise": "pangram",
+  "task": "R09-T056",
+  "task_type": "Compare implementation approaches",
+  "named_cases": [
+    "empty sentence",
+    "perfect lower case"
+  ],
+  "describe_block": "PangramTests",
+  "approach_1": "Input scan with set accumulator (reference)",
+  "approach_2": "Alphabet query with early exit (alternative)",
+  "config_paths": {
+    "authors": [
+      "meatball133"
+    ],
+    "files": {
+      "solution": [
+        "Pangram.ps1"
+      ],
+      "test": [
+        "Pangram.tests.ps1"
+      ],
+      "example": [
+        ".meta/Pangram.example.ps1"
+      ]
+    },
+    "blurb": "Determine whether a phrase uses every letter in the Latin alphabet.",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Pangram"
+  }
+}
