@@ -1,0 +1,31 @@
+{
+  "config_files": {
+    "solution": [
+      "House.ps1"
+    ],
+    "test": [
+      "House.tests.ps1"
+    ],
+    "example": [
+      ".meta/House.example.ps1"
+    ]
+  },
+  "named_cases": [
+    "verse one - the house that jack built",
+    "verse two - the malt that lay"
+  ],
+  "runs": [
+    "real reference",
+    "failing reference",
+    "empty selection",
+    "learner stub",
+    "interrupted run"
+  ],
+  "expected_exit_codes": [
+    0,
+    1,
+    2,
+    1,
+    130
+  ]
+}

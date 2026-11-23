@@ -1,0 +1,140 @@
+{
+  "runs": [
+    {
+      "run": "real reference",
+      "args": [],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "executed_cases": 14,
+      "files_unchanged": true,
+      "leftover_temp_dirs": []
+    },
+    {
+      "run": "failing reference",
+      "args": [
+        "--exercise",
+        "/var/folders/6j/l02hjd3x0_lcgrmcdmn78fg80000gn/T/tmpda6v5g6o/house"
+      ],
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "executed_cases": 14,
+      "files_unchanged": true,
+      "leftover_temp_dirs": []
+    },
+    {
+      "run": "empty selection",
+      "args": [
+        "--filter",
+        "no such test"
+      ],
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "executed_cases": 0,
+      "files_unchanged": true,
+      "leftover_temp_dirs": []
+    },
+    {
+      "run": "learner stub",
+      "args": [
+        "--use-stub"
+      ],
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "executed_cases": 14,
+      "files_unchanged": true,
+      "leftover_temp_dirs": []
+    },
+    {
+      "run": "interrupted run",
+      "expected_exit": 130,
+      "actual_exit": 130,
+      "files_unchanged": true,
+      "leftover_temp_dirs": []
+    }
+  ],
+  "tool_versions": {
+    "pester": "6.2.0",
+    "powershell": "PowerShell 7.7.0"
+  },
+  "executed_cases": 14,
+  "expected_vs_actual": [
+    {
+      "test": "verse one - the house that jack built",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "verse two - the malt that lay",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "verse three - the rat that ate",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "verse four - the cat that killed",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "verse five - the dog that worried",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "verse six - the cow with the crumpled horn",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "verse seven - the maiden all forlorn",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "verse eight - the man all tattered and torn",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "verse nine - the priest all shaven and shorn",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "verse 10 - the rooster that crowed in the morn",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "verse 11 - the farmer sowing his corn",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "verse 12 - the horse and the hound and the horn",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "multiple verses",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "full rhyme",
+      "expected": "Passed",
+      "actual": "Passed"
+    }
+  ],
+  "learner_hashes": {
+    "before": {
+      "House.ps1": "cb4d736541d6b381a586a2b732e7929d3bbf39a1846336766db15476b7971092"
+    },
+    "after": {
+      "House.ps1": "cb4d736541d6b381a586a2b732e7929d3bbf39a1846336766db15476b7971092"
+    }
+  }
+}
