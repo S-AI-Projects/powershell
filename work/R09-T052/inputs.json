@@ -1,0 +1,23 @@
+{
+  "task_id": "R09-T052",
+  "exercise_directory": "/Users/jashtolwani/Desktop/powershell-jash/exercises/practice/relative-distance",
+  "resolved_paths": {
+    "solution": "exercises/practice/relative-distance/RelativeDistance.ps1",
+    "test": "exercises/practice/relative-distance/RelativeDistance.tests.ps1",
+    "example": "exercises/practice/relative-distance/.meta/RelativeDistance.example.ps1",
+    "tests_toml": "exercises/practice/relative-distance/.meta/tests.toml"
+  },
+  "anchored_cases": [
+    "RelativeDistance test cases",
+    "Direct parent-child relation",
+    "Sibling relationship"
+  ],
+  "pre_run_learner_file_hashes": {
+    "RelativeDistance.ps1": "22d267bc6a93e2191036284ddc67cbbbbe314218fadf183607a0ed0a861dfc38"
+  },
+  "modes_configured": [
+    "mode_1_reference",
+    "mode_2_failing_reference",
+    "mode_3_empty_selection"
+  ]
+}

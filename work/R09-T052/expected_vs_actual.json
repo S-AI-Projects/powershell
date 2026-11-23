@@ -1,0 +1,54 @@
+{
+  "learner_file_hash_immutability": {
+    "initial": {
+      "RelativeDistance.ps1": "22d267bc6a93e2191036284ddc67cbbbbe314218fadf183607a0ed0a861dfc38"
+    },
+    "post_mode1": {
+      "RelativeDistance.ps1": "22d267bc6a93e2191036284ddc67cbbbbe314218fadf183607a0ed0a861dfc38"
+    },
+    "post_mode2": {
+      "RelativeDistance.ps1": "22d267bc6a93e2191036284ddc67cbbbbe314218fadf183607a0ed0a861dfc38"
+    },
+    "final": {
+      "RelativeDistance.ps1": "22d267bc6a93e2191036284ddc67cbbbbe314218fadf183607a0ed0a861dfc38"
+    },
+    "all_identical": true
+  },
+  "runs": {
+    "mode_1_reference": {
+      "expected_rc": 0,
+      "actual_rc": 0,
+      "total": 7,
+      "failed": 0,
+      "passed": 7,
+      "executed": 7,
+      "anchored_cases": {
+        "RelativeDistance test cases": true,
+        "Direct parent-child relation": true,
+        "Sibling relationship": true
+      },
+      "status": "PASS",
+      "tmp_cleaned": true
+    },
+    "mode_2_failing_reference": {
+      "expected_non_zero_exit": true,
+      "actual_rc": 1,
+      "total": 7,
+      "failed": 7,
+      "passed": 0,
+      "deliberately_failed_as_expected": true,
+      "status": "PASS",
+      "tmp_cleaned": true
+    },
+    "mode_3_empty_selection": {
+      "expected_non_zero_exit": true,
+      "actual_rc": 42,
+      "total": 7,
+      "executed": 0,
+      "notrun": 7,
+      "empty_selection_detected_and_rejected": true,
+      "status": "PASS",
+      "tmp_cleaned": true
+    }
+  }
+}
