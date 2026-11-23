@@ -1,0 +1,74 @@
+{
+  "canonical_analysis": {
+    "total_entries": 20,
+    "included_count": 19,
+    "excluded_count": 1,
+    "excluded_uuids": [
+      "2ca77b9b-c099-46c3-a02c-0d0f68ffa0fe"
+    ],
+    "target_uuid": "2ca77b9b-c099-46c3-a02c-0d0f68ffa0fe",
+    "target_entry": {
+      "description": "each ability is only calculated once",
+      "include": false,
+      "comment": "Excluded in favor of replacement UUID dca2b2ec-f729-4551-84b9-078876bb4808. PowerShell implements abilities as fixed class properties initialized once in the Character() constructor; the track test verifies that repeated property accesses return identical values ($character.<Ability> | Should -BeExactly $character.<Ability>)."
+    },
+    "replacement_uuid": "dca2b2ec-f729-4551-84b9-078876bb4808",
+    "replacement_entry": {
+      "description": "each ability is only calculated once",
+      "reimplements": "2ca77b9b-c099-46c3-a02c-0d0f68ffa0fe"
+    },
+    "toml_valid": true
+  },
+  "learner_file_hash_immutability": {
+    "initial": {
+      "DndCharacter.ps1": "ae72913c5d91535ceefcb7bbdb3fca78249f51b3e577998ce92ae98ef34ee3cf"
+    },
+    "post_mode1": {
+      "DndCharacter.ps1": "ae72913c5d91535ceefcb7bbdb3fca78249f51b3e577998ce92ae98ef34ee3cf"
+    },
+    "post_mode2": {
+      "DndCharacter.ps1": "ae72913c5d91535ceefcb7bbdb3fca78249f51b3e577998ce92ae98ef34ee3cf"
+    },
+    "final": {
+      "DndCharacter.ps1": "ae72913c5d91535ceefcb7bbdb3fca78249f51b3e577998ce92ae98ef34ee3cf"
+    },
+    "all_identical": true
+  },
+  "runs": {
+    "mode_1_reference": {
+      "expected_rc": 0,
+      "actual_rc": 0,
+      "total": 19,
+      "failed": 0,
+      "passed": 19,
+      "executed": 19,
+      "anchored_cases": {
+        "DnD Character test cases": true,
+        "ability modifier for score 3 is -4": true,
+        "ability modifier for score 4 is -3": true
+      },
+      "status": "PASS",
+      "tmp_cleaned": true
+    },
+    "mode_2_failing_reference": {
+      "expected_non_zero_exit": true,
+      "actual_rc": 1,
+      "total": 19,
+      "failed": 18,
+      "passed": 1,
+      "deliberately_failed_as_expected": true,
+      "status": "PASS",
+      "tmp_cleaned": true
+    },
+    "mode_3_empty_selection": {
+      "expected_non_zero_exit": true,
+      "actual_rc": 42,
+      "total": 19,
+      "executed": 0,
+      "notrun": 19,
+      "empty_selection_detected_and_rejected": true,
+      "status": "PASS",
+      "tmp_cleaned": true
+    }
+  }
+}
