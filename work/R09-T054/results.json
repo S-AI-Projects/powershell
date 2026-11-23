@@ -1,0 +1,81 @@
+{
+  "baseline": {
+    "total": 16,
+    "failed": 0,
+    "passed": 16,
+    "skipped": 0,
+    "notrun": 0,
+    "executed": 16,
+    "cases": {
+      "English language short": "PASS",
+      "English language long": "PASS",
+      "German language short  -Post broth": "PASS",
+      "German language long  -Post bear carpet \u2192 beards": "PASS",
+      "Bulgarian language short  -Post good": "PASS",
+      "Greek language short  -Post health": "PASS",
+      "Maths short": "PASS",
+      "Maths long": "PASS",
+      "English and emoji short": "PASS",
+      "Emoji short": "PASS",
+      "Emoji long": "PASS",
+      "Royal Flush?": "PASS",
+      "Chess pieces": "PASS",
+      "Zodiac signs": "PASS",
+      "Music notes": "PASS",
+      "Egyptian Hieroglyphs": "PASS"
+    }
+  },
+  "refactored": {
+    "total": 16,
+    "failed": 0,
+    "passed": 16,
+    "skipped": 0,
+    "notrun": 0,
+    "executed": 16,
+    "cases": {
+      "English language short": "PASS",
+      "English language long": "PASS",
+      "German language short  -Post broth": "PASS",
+      "German language long  -Post bear carpet \u2192 beards": "PASS",
+      "Bulgarian language short  -Post good": "PASS",
+      "Greek language short  -Post health": "PASS",
+      "Maths short": "PASS",
+      "Maths long": "PASS",
+      "English and emoji short": "PASS",
+      "Emoji short": "PASS",
+      "Emoji long": "PASS",
+      "Royal Flush?": "PASS",
+      "Chess pieces": "PASS",
+      "Zodiac signs": "PASS",
+      "Music notes": "PASS",
+      "Egyptian Hieroglyphs": "PASS"
+    }
+  },
+  "stub": {
+    "total": 16,
+    "failed": 16,
+    "passed": 0,
+    "skipped": 0,
+    "notrun": 0,
+    "executed": 16,
+    "cases": {
+      "English language short": "FAIL",
+      "English language long": "FAIL",
+      "German language short  -Post broth": "FAIL",
+      "German language long  -Post bear carpet \u2192 beards": "FAIL",
+      "Bulgarian language short  -Post good": "FAIL",
+      "Greek language short  -Post health": "FAIL",
+      "Maths short": "FAIL",
+      "Maths long": "FAIL",
+      "English and emoji short": "FAIL",
+      "Emoji short": "FAIL",
+      "Emoji long": "FAIL",
+      "Royal Flush?": "FAIL",
+      "Chess pieces": "FAIL",
+      "Zodiac signs": "FAIL",
+      "Music notes": "FAIL",
+      "Egyptian Hieroglyphs": "FAIL"
+    }
+  },
+  "agreement": true
+}
