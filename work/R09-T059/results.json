@@ -1,0 +1,49 @@
+{
+  "runs": [
+    {
+      "mode": "real reference",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "output": "Executed cases: 10"
+    },
+    {
+      "mode": "failing reference",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "output": "Executed cases: 10"
+    },
+    {
+      "mode": "empty selection",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "output": "Executed cases: 0"
+    },
+    {
+      "mode": "learner stub",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "output": "Executed cases: 10"
+    }
+  ],
+  "learner_hashes": {
+    "initial": {
+      "Alphametics.ps1": "4bcde29b5cb2d16a8d67a188bce23f00c18a7b63dd49ed4407645aef9f3509e7"
+    },
+    "final": {
+      "Alphametics.ps1": "4bcde29b5cb2d16a8d67a188bce23f00c18a7b63dd49ed4407645aef9f3509e7"
+    },
+    "unchanged": true
+  },
+  "test_cases": {
+    "puzzle with three letters": "Passed",
+    "solution must have unique value for each letter": "Passed",
+    "leading zero solution is invalid": "Passed",
+    "puzzle with two digits final carry": "Passed",
+    "puzzle with four letters": "Passed",
+    "puzzle with six letters": "Passed",
+    "puzzle with seven letters": "Passed",
+    "puzzle with eight letters": "Passed",
+    "puzzle with ten letters": "Passed",
+    "puzzle with ten letters and 199 addends": "Skipped"
+  }
+}
