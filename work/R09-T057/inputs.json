@@ -1,0 +1,32 @@
+{
+  "exercise": "resistor-color-duo",
+  "task": "R09-T057",
+  "task_type": "Language-specific hints",
+  "named_cases": [
+    "Brown and blac",
+    "Blue and grey"
+  ],
+  "describe_block": "Test Get-ColorCodeValue",
+  "chosen_construct": "Explicit return values with integer arithmetic ($firstColor * 10 + $secondColor)",
+  "contrasting_pitfall": "String concatenation producing [string] instead of [int]",
+  "reference_link": "https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_return",
+  "config_paths": {
+    "authors": [
+      "meatball133"
+    ],
+    "files": {
+      "solution": [
+        "ResistorColorDuo.ps1"
+      ],
+      "test": [
+        "ResistorColorDuo.tests.ps1"
+      ],
+      "example": [
+        ".meta/ResistorColorDuo.example.ps1"
+      ]
+    },
+    "blurb": "Convert color codes, as used on resistors, to a numeric value.",
+    "source": "Maud de Vries, Erik Schierboom",
+    "source_url": "https://github.com/exercism/problem-specifications/issues/1464"
+  }
+}
