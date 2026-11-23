@@ -1,0 +1,49 @@
+{
+  "exercise": "series",
+  "task": "R09-T058",
+  "task_type": "Exercise maintenance metadata",
+  "named_cases": [
+    "slices of one from one",
+    "slices of one from two"
+  ],
+  "describe_block": "Test Get-Slices",
+  "fixtures": [
+    {
+      "name": "missing reference",
+      "key": "example",
+      "path": ".meta/Missing.example.ps1",
+      "expected_code": "MISSING_FILE"
+    },
+    {
+      "name": "missing test",
+      "key": "test",
+      "path": "Missing.tests.ps1",
+      "expected_code": "MISSING_FILE"
+    },
+    {
+      "name": "outside exercise",
+      "key": "test",
+      "path": "../series/Series.tests.ps1",
+      "expected_code": "OUTSIDE_EXERCISE"
+    }
+  ],
+  "config_paths": {
+    "authors": [
+      "meatball133"
+    ],
+    "files": {
+      "solution": [
+        "Series.ps1"
+      ],
+      "test": [
+        "Series.tests.ps1"
+      ],
+      "example": [
+        ".meta/Series.example.ps1"
+      ]
+    },
+    "blurb": "Given a string of digits, output all the contiguous substrings of length `n` in that string.",
+    "source": "A subset of the Problem 8 at Project Euler",
+    "source_url": "https://projecteuler.net/problem=8"
+  }
+}
