@@ -1,0 +1,317 @@
+{
+  "executed_cases": 30,
+  "tool_versions": {
+    "pester": "6.2.0",
+    "powershell": "7.7.0"
+  },
+  "expected_vs_actual": [
+    {
+      "test": "Given 1 it outputs I",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "Given 2 it outputs II",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "Given 3 it outputs III",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "Given 4 it outputs IV",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "Given 5 it outputs V",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "Given 6 it outputs VI",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "Given 9 it outputs IX",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "Given 16 it outputs XVI",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "Given 27 it outputs XXVII",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "Given 48 it outputs XLVIII",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "Given 49 it outputs XLIX",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "Given 59 it outputs LIX",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "Given 66 it outputs LXVI",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "Given 93 it outputs XCIII",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "Given 141 it outputs CXLI",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "Given 163 it outputs CLXIII",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "Given 166 it outputs CLXVI",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "Given 402 it outputs CDII",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "Given 575 it outputs DLXXV",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "Given 666 it outputs DCLXVI",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "Given 911 it outputs CMXI",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "Given 1024 it outputs MXXIV",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "Given 1666 it outputs MDCLXVI",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "Given 3000 it outputs MMM",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "Given 3001 it outputs MMMI",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "Given 3888 it outputs MMMDCCCLXXXVIII",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "Given 3999 it outputs MMMCMXCIX",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "Number is zero",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "Negative number",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "Number larger than 3999",
+      "expected": "Passed",
+      "actual": "Passed"
+    }
+  ],
+  "direct_results": {
+    "1": {
+      "n": 1,
+      "ok": true,
+      "value": "I"
+    },
+    "2": {
+      "n": 2,
+      "ok": true,
+      "value": "II"
+    },
+    "3": {
+      "n": 3,
+      "ok": true,
+      "value": "III"
+    },
+    "4": {
+      "n": 4,
+      "ok": true,
+      "value": "IV"
+    },
+    "5": {
+      "n": 5,
+      "ok": true,
+      "value": "V"
+    },
+    "6": {
+      "n": 6,
+      "ok": true,
+      "value": "VI"
+    },
+    "9": {
+      "n": 9,
+      "ok": true,
+      "value": "IX"
+    },
+    "16": {
+      "n": 16,
+      "ok": true,
+      "value": "XVI"
+    },
+    "27": {
+      "n": 27,
+      "ok": true,
+      "value": "XXVII"
+    },
+    "48": {
+      "n": 48,
+      "ok": true,
+      "value": "XLVIII"
+    },
+    "49": {
+      "n": 49,
+      "ok": true,
+      "value": "XLIX"
+    },
+    "59": {
+      "n": 59,
+      "ok": true,
+      "value": "LIX"
+    },
+    "66": {
+      "n": 66,
+      "ok": true,
+      "value": "LXVI"
+    },
+    "93": {
+      "n": 93,
+      "ok": true,
+      "value": "XCIII"
+    },
+    "141": {
+      "n": 141,
+      "ok": true,
+      "value": "CXLI"
+    },
+    "163": {
+      "n": 163,
+      "ok": true,
+      "value": "CLXIII"
+    },
+    "166": {
+      "n": 166,
+      "ok": true,
+      "value": "CLXVI"
+    },
+    "402": {
+      "n": 402,
+      "ok": true,
+      "value": "CDII"
+    },
+    "575": {
+      "n": 575,
+      "ok": true,
+      "value": "DLXXV"
+    },
+    "666": {
+      "n": 666,
+      "ok": true,
+      "value": "DCLXVI"
+    },
+    "911": {
+      "n": 911,
+      "ok": true,
+      "value": "CMXI"
+    },
+    "1024": {
+      "n": 1024,
+      "ok": true,
+      "value": "MXXIV"
+    },
+    "1666": {
+      "n": 1666,
+      "ok": true,
+      "value": "MDCLXVI"
+    },
+    "3000": {
+      "n": 3000,
+      "ok": true,
+      "value": "MMM"
+    },
+    "3001": {
+      "n": 3001,
+      "ok": true,
+      "value": "MMMI"
+    },
+    "3888": {
+      "n": 3888,
+      "ok": true,
+      "value": "MMMDCCCLXXXVIII"
+    },
+    "3999": {
+      "n": 3999,
+      "ok": true,
+      "value": "MMMCMXCIX"
+    },
+    "0": {
+      "n": 0,
+      "ok": false,
+      "value": "Number has to be positive integer in range of 1-3999."
+    },
+    "-12": {
+      "n": -12,
+      "ok": false,
+      "value": "Number has to be positive integer in range of 1-3999."
+    },
+    "9999": {
+      "n": 9999,
+      "ok": false,
+      "value": "Number has to be positive integer in range of 1-3999."
+    }
+  },
+  "learner_stub": {
+    "Result": "Failed",
+    "Total": 30,
+    "Passed": 0,
+    "Failed": 30
+  }
+}
