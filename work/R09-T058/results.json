@@ -1,0 +1,39 @@
+{
+  "real_config_valid": true,
+  "fixtures": [
+    {
+      "name": "missing reference",
+      "key": "example",
+      "path": ".meta/Missing.example.ps1",
+      "expected_code": "MISSING_FILE",
+      "actual_output": "ERROR MISSING_FILE example: .meta/Missing.example.ps1",
+      "exit_code": 1
+    },
+    {
+      "name": "missing test",
+      "key": "test",
+      "path": "Missing.tests.ps1",
+      "expected_code": "MISSING_FILE",
+      "actual_output": "ERROR MISSING_FILE test: Missing.tests.ps1",
+      "exit_code": 1
+    },
+    {
+      "name": "outside exercise",
+      "key": "test",
+      "path": "../series/Series.tests.ps1",
+      "expected_code": "OUTSIDE_EXERCISE",
+      "actual_output": "ERROR OUTSIDE_EXERCISE test: ../series/Series.tests.ps1",
+      "exit_code": 1
+    }
+  ],
+  "reference": {
+    "total": 11,
+    "passed": 11,
+    "failed": 0
+  },
+  "stub": {
+    "total": 11,
+    "passed": 0,
+    "failed": 11
+  }
+}
