@@ -1,0 +1,50 @@
+{
+  "config_files": {
+    "solution": [
+      "RomanNumerals.ps1"
+    ],
+    "test": [
+      "RomanNumerals.tests.ps1"
+    ],
+    "example": [
+      ".meta/RomanNumerals.example.ps1"
+    ]
+  },
+  "hint_table_1": [
+    [
+      1,
+      "I"
+    ],
+    [
+      4,
+      "IV"
+    ],
+    [
+      9,
+      "IX"
+    ],
+    [
+      3999,
+      "MMMCMXCIX"
+    ]
+  ],
+  "hint_table_2": [
+    [
+      0,
+      "Number is zero",
+      "an error"
+    ],
+    [
+      -12,
+      "Negative number",
+      "an error"
+    ],
+    [
+      9999,
+      "Number larger than 3999",
+      "an error"
+    ]
+  ],
+  "direct_inputs_file": "cases.json",
+  "pester_command": "Invoke-Pester -PassThru"
+}
