@@ -1,0 +1,17 @@
+{
+  "exercise": "transpose",
+  "task": "R09-T053",
+  "mutation": {
+    "old": ".TrimEnd()",
+    "new": ".Trim()"
+  },
+  "rejecting_uuid": "984e2ec3-b3d3-4b53-8bd6-96f5ef404102",
+  "rejecting_test_name": "second line longer than first line",
+  "named_pass": [
+    "empty string",
+    "two characters in a row"
+  ],
+  "diagnostic_input": "AB\nDEF",
+  "diagnostic_expected_original": "AD\nBE\n F",
+  "diagnostic_expected_mutant": "AD\nBE\nF"
+}
