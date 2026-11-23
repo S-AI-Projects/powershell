@@ -1,0 +1,59 @@
+{
+  "toml": {
+    "included": 7,
+    "excluded": 0
+  },
+  "test_file_sha256": {
+    "copy_a": "7050e15e91f8b0aaca3a37b98e81bb3345e2153eaa0f59f56a02b34154498b69",
+    "copy_b": "7050e15e91f8b0aaca3a37b98e81bb3345e2153eaa0f59f56a02b34154498b69",
+    "repo": "7050e15e91f8b0aaca3a37b98e81bb3345e2153eaa0f59f56a02b34154498b69"
+  },
+  "executed_cases": 7,
+  "expected_vs_actual": [
+    {
+      "test": "Direct parent-child relation",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "Sibling relationship",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "Two degrees of separation, grandchild",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "Unrelated individuals",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "Complex graph, cousins",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "Complex graph, no shortcut, far removed nephew",
+      "expected": "Passed",
+      "actual": "Passed"
+    },
+    {
+      "test": "Complex graph, some shortcuts, cross-down and cross-up, cousins several times removed, with unrelated family tree",
+      "expected": "Passed",
+      "actual": "Passed"
+    }
+  ],
+  "tool_versions": {
+    "pester": "6.2.0",
+    "powershell": "7.7.0"
+  },
+  "learner_stub": {
+    "Result": "Failed",
+    "Total": 7,
+    "Passed": 0,
+    "Failed": 7
+  }
+}
