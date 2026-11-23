@@ -1,0 +1,25 @@
+{
+  "task_id": "R09-T051",
+  "exercise_directory": "/Users/jashtolwani/Desktop/powershell-jash/exercises/practice/dnd-character",
+  "resolved_paths": {
+    "solution": "exercises/practice/dnd-character/DndCharacter.ps1",
+    "test": "exercises/practice/dnd-character/DndCharacter.tests.ps1",
+    "example": "exercises/practice/dnd-character/.meta/DndCharacter.example.ps1",
+    "tests_toml": "exercises/practice/dnd-character/.meta/tests.toml"
+  },
+  "anchored_cases": [
+    "DnD Character test cases",
+    "ability modifier for score 3 is -4",
+    "ability modifier for score 4 is -3"
+  ],
+  "target_exclusion_uuid": "2ca77b9b-c099-46c3-a02c-0d0f68ffa0fe",
+  "replacement_uuid": "dca2b2ec-f729-4551-84b9-078876bb4808",
+  "pre_run_learner_file_hashes": {
+    "DndCharacter.ps1": "ae72913c5d91535ceefcb7bbdb3fca78249f51b3e577998ce92ae98ef34ee3cf"
+  },
+  "modes_configured": [
+    "mode_1_reference",
+    "mode_2_failing_reference",
+    "mode_3_empty_selection"
+  ]
+}
